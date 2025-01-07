@@ -1,8 +1,4 @@
+// var true = 10 // not allow
+var mathNumber = 10;
+var accountNumberDetailsId = 104;
 
-var name  = "Shihab";
-var age = 25;
-console.log(name)
-console.log(age)
-
-console.log("My name is ", name)
-console.log("I am " + age + " old")
