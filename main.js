@@ -10,3 +10,10 @@ var num = Number("45.6");
 
 console.log(Number.parseFloat(num));
 console.log(Number.parseInt(PI));
+
+console.log(Number.MAX_VALUE)
+console.log(Number.MIN_SAFE_INTEGER)
+
+
+console.log(1/0)
+console.log("abc"+ 10)
