@@ -1,19 +1,10 @@
-var num = 123;
-var PI = 3.14;
+// string leteral
+var str = 'string';
+var str2 = "string 2";
+console.log(str, str2);
 
-console.log(num);
-console.log(PI);
-
-var num1 = Number(45);
-var num2 = Number('45');
-var num = Number("45.6");
-
-console.log(Number.parseFloat(num));
-console.log(Number.parseInt(PI));
-
-console.log(Number.MAX_VALUE)
-console.log(Number.MIN_SAFE_INTEGER)
-
-
-console.log(1/0)
-console.log("abc"+ 10)
+//string constructor
+var str3 = String('fas');
+var str4 = String(123);
+var str5 = String(3.1416);
+console.log(str3, str4, str5);
