@@ -1,24 +1,33 @@
-var a = 20;
-var b = 20;
+var a = 10;
+var b = 40;
+var c = 20;
 
-if(a>b){
-    console.log('a is greater than b')
+if (a > b && a > c) {
+    console.log('a is greater than b and c');
 }
-else if (a<b){
-    console.log('b is greater than a')
+else if (b > a && b > c) {
+    console.log("b is greater than a and c");
 }
 else {
-    console.log('they both are same')
+    console.log('c is large');
 }
 
 
-var n = 5;
-if (n%2==0){
-    console.log(n,' is even number')
+a = 50;
+b = 40;
+c = 20;
+
+
+if(a>b || a>c){
+    console.log('a is large')
 }
-else if (n%2==1){
-    console.log(n, 'is odd number')
+else if (b>a|| b>c){
+    console.log('b is large')
 }
 else{
-    console.log(n,'is zero')
+    console.log('c is large')
 }
+
+
+var check = !(a>b)
+console.log(check)
