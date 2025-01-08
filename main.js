@@ -1,15 +1,18 @@
-var n = 10;
-var str =''
 
-if (n%2== 0){
-    str ='Even'
+/* var name = ''
+/* var name = 'Sajjatul'
+
+var fullName = ""
+
+if(name.length == 0){
+    fullName = 'Shihab'
 }
 else{
-    str = "Odd"
+    fullName = name;
 }
-console.log(str)
 
-// ternary Operator
+console.log(fullName) */
 
-var result = n%2 == 0?"Even":"Odd"
-console.log(result)
+var name = ''
+var fullName = name || "Shihab"
+console.log(fullName)
