@@ -1,4 +1,10 @@
-var hex = 0xff
-var oct = 0o457
-console.log(hex)
-console.log(oct)
+var a = 11;
+var b= 3;
+console.log(a % b)
+
+console.log(++a)
+
+console.log(a++)
+console.log(a)
+
+console.log(typeof a)
