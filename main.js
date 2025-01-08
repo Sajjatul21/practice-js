@@ -1,10 +1,8 @@
-// string leteral
-var str = 'string';
-var str2 = "string 2";
-console.log(str, str2);
+var b1 = true
+var b2 = false;
 
-//string constructor
-var str3 = String('fas');
-var str4 = String(123);
-var str5 = String(3.1416);
-console.log(str3, str4, str5);
+console.log("boolean lateral:", b1,b2)
+
+var b3= Boolean(false)
+var b4 = Boolean(true)
+console.log("constructor boolean:", b3,b4)
