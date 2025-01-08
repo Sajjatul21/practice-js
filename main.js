@@ -1,10 +1,6 @@
-var a = 11;
-var b= 3;
-console.log(a % b)
+console.log('hello world')
 
-console.log(++a)
+var str = 'String'
 
-console.log(a++)
-console.log(a)
-
-console.log(typeof a)
+var number = 10 + (30/5)*5;
+var a = 10;
