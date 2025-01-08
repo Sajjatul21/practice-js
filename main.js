@@ -1,15 +1,24 @@
-var date = new Date();
-console.log(date);
+var a = 20;
+var b = 20;
 
-console.log(date.toDateString());
-console.log(date.toTimeString());
-console.log(date.toLocaleString());
-console.log(date.toLocaleDateString())
+if(a>b){
+    console.log('a is greater than b')
+}
+else if (a<b){
+    console.log('b is greater than a')
+}
+else {
+    console.log('they both are same')
+}
 
 
-console.log("full Year",date.getFullYear())
-console.log('month', date.getMonth())
-console.log('date', date.getDate())
-console.log('hour', date.getHours())
-console.log('minute', date.getMinutes())
-console.log('second', date.getSeconds())
+var n = 5;
+if (n%2==0){
+    console.log(n,' is even number')
+}
+else if (n%2==1){
+    console.log(n, 'is odd number')
+}
+else{
+    console.log(n,'is zero')
+}
