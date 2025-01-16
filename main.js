@@ -1,14 +1,15 @@
 var obj = {
     x: 10,
     y: 20,
+    z: 30
 };
 
-var obj2 = {
-    x: 10,
-    y: 20,
-};
+console.log("x" in obj);
+console.log("p" in obj);
 
-console.log(obj == obj2)
-console.log(obj.a == obj2.a && obj.b == obj2.b)
+for(var i in obj){
+    // console.log(i)
+    // console.log(obj[i])
 
-console.log(JSON.stringify(obj)== JSON.stringify(obj2))
+    console.log(i,":",obj[i])
+}
