@@ -1,16 +1,8 @@
-var arr = [1, 4, 3, 9, 8, 5, 7];
+var arr = [1, 4, 3, 9, 8, 5, 7,8];
 
-var sum = 0;
-for (var i = 0; i < arr.length; i++) {
-    // console.log(arr[i])
-    /* arr[i] = arr[i] + 2;
-    console.log(arr[i]); */
-    sum += arr[i];
-}
-console.log(sum);
+// arr[2] = 44
+/* arr.push(9)
+arr.unshift(10) */
 
-for (var i = 0; i < arr.length; i++) {
-    if (arr[i] % 2 == 0) {
-        console.log(arr[i]);
-    }
-}
+arr.splice(2,0,100)
+console.log(arr)
