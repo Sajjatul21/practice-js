@@ -2,15 +2,24 @@ var arr1 = [23, 43, 64];
 var arr2 = [65, 83, 94];
 var arr3 = [5, 85, 90];
 
-function sumOfArray(arr){
+function sumOfArray(arr) {
     var sum = 0;
-    for(var i = 0;i<arr.length;i++){
-        sum += arr[i]
+    for (var i = 0; i < arr.length; i++) {
+        sum += arr[i];
     }
-    console.log(sum)
+    return sum;
 }
 
-sumOfArray(arr1)
-sumOfArray(arr2)
-sumOfArray(arr3)
+var result = sumOfArray(arr1);
+console.log(result);
 
+
+function person(name, email) {
+    return {
+        name: name,
+        email: email
+    };
+}
+
+var p1 = person("Shihab", 'dev.sajjatul@gmail.com');
+console.log(p1);
