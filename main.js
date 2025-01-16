@@ -1,16 +1,21 @@
-var n = 5;
-for (var i = 1; i <= n; i++) {
-    var result = '';
-    for (var j = 1; j <= i; j++) {
-        result = result + j + ' ';
+
+while (true) {
+    var rand = Math.floor(Math.random() * 10 + 1);
+
+    if (rand == 9) {
+        console.log("Winner winner chicken dinner");
+        break;
     }
-    console.log(result);
+    else {
+        console.log("yoy have got", rand);
+    }
 }
 
-for (var i =1; i<=n; i++){
-    var result = ''
-    for(var j = 1; j<=n; j++){
-        result = result + "*"+ ' '
+for (var i = 1; i <= 10; i++) {
+    if (i % 5 == 0) {
+        break;
     }
-    console.log(result)
+    else {
+        console.log(i);
+    }
 }
