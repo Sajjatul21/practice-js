@@ -1,26 +1,24 @@
-function sqr(n) {
-    return n * n;
+function add(a, b) {
+    return a + b;
 }
-console.log(sqr(2));
-console.log(sqr(2));
-console.log(sqr(2));
 
-var n = 10;
-function change() {
-    n = 100;
+var sum = add;
+console.log(sum(5, 5));
+console.log(typeof sum);
+
+var arr = [];
+arr.push(add);
+console.log(arr);
+console.log(arr[0](5,5));
+
+var obj = {
+    sum : add
 }
-change();
-console.log(n);
 
-var point = {
-    x: 10,
-    y: 20
-};
+console.log(obj)
+console.log(obj.sum(5,5))
 
-function printPoint(point) {
-    point.x = 100;
-    point.y = 200;
-    console.log(point);
-}
-printPoint(point);
-console.log(point);
+
+setTimeout(function(){
+    console.log('I have created...')
+},100)
