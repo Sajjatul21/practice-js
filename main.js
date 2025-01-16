@@ -1,42 +1,26 @@
-var a = 'abc';
-
-if (true) {
-    if (true) {
-        var b = 'i am B';
-    }
+function sqr(n) {
+    return n * n;
 }
-console.log(b);
+console.log(sqr(2));
+console.log(sqr(2));
+console.log(sqr(2));
 
-function x() {
-    // var a = 20;
-    function y() {
-        // var a = 10;
-        console.log(a);
-        // console.log(b)
-    }
-    console.log(a);
-    y();
+var n = 10;
+function change() {
+    n = 100;
 }
-x();
+change();
+console.log(n);
 
+var point = {
+    x: 10,
+    y: 20
+};
 
-
-function test(n) {
-
-    function a() {
-        return n % 3 == 0;
-    }
-    function b() {
-        return n % 5 == 0;
-    }
-
-    if (a() && b()) {
-        console.log(n, ' is divisible by both 3 and 5');
-    }
-    else {
-        console.log("Not a valid number");
-    }
+function printPoint(point) {
+    point.x = 100;
+    point.y = 200;
+    console.log(point);
 }
-
-test(10);
-test(15);
+printPoint(point);
+console.log(point);
