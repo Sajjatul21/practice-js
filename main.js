@@ -1,17 +1,19 @@
-var point = {
+var obj = {
     x: 10,
-    y: 20
+    y: 20,
+    z: 30
 };
 
-console.log(point);
-point.x = 5;
-point.z = 30;
-console.log(point);
+console.log(obj.x);
+console.log(obj.y);
 
-var obj = Object();
-obj.a = 10;
-console.log(obj);
+console.log(obj['x']);
 
-var obj1 = new Object();
-obj1.b = 20;
-console.log(obj1);
+
+var person = {
+    name: 'Johan',
+    age: 32
+};
+
+console.log(person["name"]);
+console.log(person["age"]);
