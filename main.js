@@ -1,18 +1,16 @@
-var str = 'some thing';
-console.log(str.charAt(0));
-var str2 = str.charAt(200);
-console.log(typeof str2);
+var arr = [1, 2, 3, 4, 5];
+console.log(arr);
+console.log(arr[0]);
+console.log(arr[1]);
+console.log(arr[2]);
+console.log(arr[3]);
 
+arr[2] = 34;
+arr[10] = 100;
+console.log(arr);
 
-var length = 0;
-while (true) {
-    if (str.charAt(length) == '') {
-        break;
-    }
-    else {
-        length++;
-    }
-}
-console.log(length);
+var arr2 = Array();
+console.log(arr2);
 
-console.log('Sajjatul islam'.length)
+var arr3 = Array(10, 20, 30);
+console.log(arr3);
