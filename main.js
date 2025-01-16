@@ -1,14 +1,14 @@
-var arr = [1, 4, 3, 9, 8, 5, 7,8];
+var arr = [
+    [87, 56, 79, 100],
+    [58, 78, 98, 90],
+    [96, 79, 45, 99]
+];
+/* 
+console.log(arr[0])
+console.log(arr[0][0]) */
 
-// arr[2] = 44
-/* arr.push(9)
-arr.unshift(10) */
-
-arr.splice(2,0,100)
-
-// arr.pop()
-// arr.shift()
-// arr.splice(1,2)
-
-arr.splice(3,1,33,55)
-console.log(arr)
+for(var i = 0; i<arr.length;i++){
+    for(var j = 0 ;j<arr[i].length; j++){
+        console.log("Element ",i,": ",arr[i][j])
+    }
+}
