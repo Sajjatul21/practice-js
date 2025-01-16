@@ -1,16 +1,16 @@
-var arr = [1, 2, 3, 4, 5];
-console.log(arr);
-console.log(arr[0]);
-console.log(arr[1]);
-console.log(arr[2]);
-console.log(arr[3]);
+var arr = [1, 4, 3, 9, 8, 5, 7];
 
-arr[2] = 34;
-arr[10] = 100;
-console.log(arr);
+var sum = 0;
+for (var i = 0; i < arr.length; i++) {
+    // console.log(arr[i])
+    /* arr[i] = arr[i] + 2;
+    console.log(arr[i]); */
+    sum += arr[i];
+}
+console.log(sum);
 
-var arr2 = Array();
-console.log(arr2);
-
-var arr3 = Array(10, 20, 30);
-console.log(arr3);
+for (var i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 == 0) {
+        console.log(arr[i]);
+    }
+}
