@@ -1,25 +1,24 @@
-var arr1 = [23, 43, 64];
-var arr2 = [65, 83, 94];
-var arr3 = [5, 85, 90];
-
-function sumOfArray(arr) {
-    var sum = 0;
-    for (var i = 0; i < arr.length; i++) {
-        sum += arr[i];
+function something(greet, name) {
+    function sayHi() {
+        console.log(greet, name);
     }
-    return sum;
+    sayHi();
 }
 
-var result = sumOfArray(arr1);
-console.log(result);
+something("Good Morning", "Shihab");
 
-
-function person(name, email) {
-    return {
-        name: name,
-        email: email
-    };
+function message(greet, name) {
+    function getFirstName() {
+        if (name) {
+            return name.split(' ')[0];
+        }
+        else {
+            return '';
+        }
+    }
+    var message = greet + " " + getFirstName()
+    console.log(message)
 }
-
-var p1 = person("Shihab", 'dev.sajjatul@gmail.com');
-console.log(p1);
+message("Good Morning","Sajjatul Islam")
+message("Good Morning","Shihab")
+message("Good Morning")
