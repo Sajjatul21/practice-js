@@ -1,24 +1,42 @@
-function something(greet, name) {
-    function sayHi() {
-        console.log(greet, name);
+var a = 'abc';
+
+if (true) {
+    if (true) {
+        var b = 'i am B';
     }
-    sayHi();
+}
+console.log(b);
+
+function x() {
+    // var a = 20;
+    function y() {
+        // var a = 10;
+        console.log(a);
+        // console.log(b)
+    }
+    console.log(a);
+    y();
+}
+x();
+
+
+
+function test(n) {
+
+    function a() {
+        return n % 3 == 0;
+    }
+    function b() {
+        return n % 5 == 0;
+    }
+
+    if (a() && b()) {
+        console.log(n, ' is divisible by both 3 and 5');
+    }
+    else {
+        console.log("Not a valid number");
+    }
 }
 
-something("Good Morning", "Shihab");
-
-function message(greet, name) {
-    function getFirstName() {
-        if (name) {
-            return name.split(' ')[0];
-        }
-        else {
-            return '';
-        }
-    }
-    var message = greet + " " + getFirstName()
-    console.log(message)
-}
-message("Good Morning","Sajjatul Islam")
-message("Good Morning","Shihab")
-message("Good Morning")
+test(10);
+test(15);
