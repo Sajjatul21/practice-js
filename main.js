@@ -1,21 +1,46 @@
-var arr = [2, 5, 2, 7, 8, 5, 4, 9, 5, 8, 4];
-
-var result = arr.findIndex(function (value) {
-    // return value ===9
-    return value === -9;
-});
-
-console.log(result);
-
-function findIndex(arr, cb) {
-    for (var i = 0; i < arr.length; i++) {
-        if (cb(arr[i])) {
-            return i;
-        }
+var persons = [
+    {
+        name: "A",
+        age: 24
+    },
+    {
+        name: "B",
+        age: 19
+    },
+    {
+        name: "C",
+        age: 25
+    },
+    {
+        name: "D",
+        age: 21
     }
-}
-var findElement = findIndex(arr, function(value) {
-    return value == 9;
-});
+];
+var arr = [5, 4, 3, 8, 1, 7, 0, 6, 5, 7, -2, -8];
 
-console.log(findElement)
+arr.sort(function (a, b) {
+    if (a > b) {
+        return -1;
+    }
+    else if (a < b) {
+        return 1;
+    }
+    else {
+        return 0;
+    }
+});
+console.log(arr);
+
+
+persons.sort(function (a, b) {
+    if (a.age > b.age) {
+        return 1;
+    }
+    else if (a.age < b.age) {
+        return -1;
+    }
+    else {
+        return 0;
+    }
+});
+console.log(persons);
