@@ -1,18 +1,9 @@
-function a() {
-    b();
-    console.log("I am Function a");
-}
-function b() {
-    d();
-    console.log("I am Function b");
-}
-function c() {
-    console.log("I am Function c");
-}
-function d() {
-    c();
-    console.log("I am Function d");
-}
-var x = 100;
-a()
-console.log("i am global")
+var a = 10;
+var b;
+console.log("a is", a);
+console.log("b is", b);
+b = 20;
+console.log("b is ", b);
+console.log("c is", c);
+var c = 30;
+console.log("c is", c);
