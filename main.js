@@ -1,31 +1,26 @@
-var b = 10;
-function a() {
-    console.log(b);
+function sample(a, b, callback) {
+    var c = a + b;
+
+    var d = a - b;
+
+    /* var sum = c + d;
+    console.log(sum); */
+
+    var result = callback(c, d);
+    return result;
 }
 
-a();
+console.log(sample(8, 2, sum));
 
-
-function outer() {
-    let outerVariable = "I am from outer function";
-
-    function inner() {
-        console.log(outerVariable);
-    }
-    return inner;
+function sum(a, b) {
+    return a + b;
 }
 
-const closureExample = outer();
+console.log(sample(8, 3, function (a, b) {
+    return a - b;
+}));
 
-closureExample();
 
-function closure() {
-    var x = 5;
-    return function () {
-        console.log(x);
-    };
-}
-
-var abc = closure();
-// console.dir(abc);
-abc()
+console.log(sample(8, 5, function (a, b) {
+    return a * b;
+}));
