@@ -18,3 +18,14 @@ function outer() {
 const closureExample = outer();
 
 closureExample();
+
+function closure() {
+    var x = 5;
+    return function () {
+        console.log(x);
+    };
+}
+
+var abc = closure();
+// console.dir(abc);
+abc()
