@@ -1,14 +1,12 @@
-function add (a,b,c){
-    return a + b +c
+function print(inp) {
+    console.log(inp);
 }
-console.log(add(2,3,4))
 
-function curring(a){
-    return function(b){
-        return  function(c){
-            return a + b +c
-        }
-    }
+function multiply(n) {
+    return n * 5;
 }
-var result = curring(2)(3)(4)
-console.log(result)
+
+function add(a, b) {
+    return a + b;
+}
+print(multiply(add(4,4)))
