@@ -1,13 +1,23 @@
+function greet(msg) {
+    function greeting(name) {
+        return msg + ' ' + name;
+    }
+    return greeting;
+}
 
-var arr = [5, 4, 3, 8, 1, 7, 0, 6, 5, 7, -2, -8];
+var gm = greet('Good morning');
+var msg = gm("Sajjjatul Islam");
+console.log(msg);
 
-var res = arr.every(function(value){
-    return value % 2 ==0
-})
-console.log(res)
+function base(b) {
+    return function (n) {
+        var result = 1;
+        for (var i = 0; i < b; i++) {
+            result *= n;
+        }
+        return result;
+    };
+}
 
-var res2 = arr.some(function(value){
-    return value >=0
-})
-
-console.log(res2)
+var base10 = base(10);
+console.log(base10(2));
