@@ -1,15 +1,8 @@
-function display(some) {
-    console.log(some);
-}
+var arr = [1, 2, 3, 4, 5];
+var sum = 0;
+arr.forEach(function(value, index, arr){
+    // console.log(value,index,arr)
+    sum += value
+})
 
-function calculator(num1, num2, callback) {
-    let sum = num1 + num2;
-    callback(sum);
-}
-
- calculator(5, 5, display);
-
- calculator(10,20,function(result){
-    console.log(result)
- })
-
+console.log(sum)
