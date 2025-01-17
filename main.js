@@ -1,20 +1,20 @@
-function add(a, b) {
-    return a + b;
+var b = 10;
+function a() {
+    console.log(b);
 }
 
-function manipulate(a, b, func) {
-    var c = a + b;
-    var d = a - b;
+a();
 
-    /*  function multiply() {
-         var m = func(a, b);
-         return c * d * m;
-     }
-     return multiply; */
-    return function () {
-        var m = func(c, d);
-        return c * d * m;
-    };
+
+function outer() {
+    let outerVariable = "I am from outer function";
+
+    function inner() {
+        console.log(outerVariable);
+    }
+    return inner;
 }
-var multiply = manipulate(4, 3, add);
-console.log(multiply());
+
+const closureExample = outer();
+
+closureExample();
