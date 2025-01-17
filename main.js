@@ -1,20 +1,9 @@
-var arr = [1, 2, 3, 4, 5];
+var arr = [2, 5, 2, 7, 8, 5, 4, 9, 5, 8, 4];
 
-function map(arr, callback) {
-    var newArray = [];
-    for (var i = 0; i < arr.length; i++) {
-        // var temp = arr[i] * arr[i];
-
-        newArray.push(callback(arr[i]));
-    }
-    return newArray;
-}
-
-var myMap= map(arr,function (value){
-    return value * value
+var filterArr = arr.filter(function(value){
+    // return value % 2==0;
+    // return value % 2==1;
+    return value > 4
 })
-console.log(myMap)
 
-console.log(map(arr,function(value){
-    return value * 10
-}))
+console.log(filterArr)
