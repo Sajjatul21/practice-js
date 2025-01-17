@@ -1,11 +1,7 @@
-function test(){
-    var msg = 'I am learning scope and closure'
-
-    return function(){
-        console.log(msg)
-    }
-
+for(let i = 0; i<=5; i++){
+   (function(n){
+    setTimeout(function(){
+        console.log(n)
+    },1000* i)
+   })(i)
 }
-
-var sayMsg = test()
-sayMsg()
