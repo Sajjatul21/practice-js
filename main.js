@@ -1,23 +1,36 @@
-function greet(msg) {
-    function greeting(name) {
-        return msg + ' ' + name;
+function sayHi(n) {
+    if (n == 0) {
+        return;
     }
-    return greeting;
+    console.log(n, 'Hi,I am calling');
+    sayHi(n - 1);
+}
+sayHi(5);
+
+function sum(n) {
+    if (n == 1) {
+        return 1;
+    }
+    return n + (sum(n - 1));
 }
 
-var gm = greet('Good morning');
-var msg = gm("Sajjjatul Islam");
-console.log(msg);
+console.log(sum(5));
 
-function base(b) {
-    return function (n) {
-        var result = 1;
-        for (var i = 0; i < b; i++) {
-            result *= n;
-        }
-        return result;
-    };
+function fact(n) {
+    if (n == 1) {
+        return 1;
+    }
+    return n * fact(n - 1);
+}
+console.log(fact(4));
+
+var arr = [1, 2, 3, 4, 5];
+
+function sumOfArray(arr, lastIndex) {
+    if (lastIndex < 0) {
+        return 0;
+    }
+    return arr[lastIndex] + sumOfArray(arr,lastIndex-1)
 }
 
-var base10 = base(10);
-console.log(base10(2));
+console.log(sumOfArray(arr,arr.length-1))
