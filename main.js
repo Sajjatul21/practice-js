@@ -1,12 +1,18 @@
-function print(inp) {
-    console.log(inp);
+function a() {
+    b();
+    console.log("I am Function a");
 }
-
-function multiply(n) {
-    return n * 5;
+function b() {
+    d();
+    console.log("I am Function b");
 }
-
-function add(a, b) {
-    return a + b;
+function c() {
+    console.log("I am Function c");
 }
-print(multiply(add(4,4)))
+function d() {
+    c();
+    console.log("I am Function d");
+}
+var x = 100;
+a()
+console.log("i am global")
