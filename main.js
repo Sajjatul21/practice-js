@@ -5,3 +5,14 @@ var sum = arr.reduce(function (previousValue, CurrentValue) {
     return Math.max(previousValue, CurrentValue);
 });
 console.log(sum);
+
+function reduce(arr, cb, acc) {
+    for (var i = 0; i < arr.length; i++) {
+        acc = cb(acc, arr[i]);
+    }
+    return acc;
+}
+var sum1 = reduce(arr, function (pre, curr) {
+    return Math.min(pre,curr)
+}, arr[0]);
+console.log(sum1)
