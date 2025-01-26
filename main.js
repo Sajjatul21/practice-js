@@ -1,33 +1,6 @@
-
-
-var Rectangle = function (width, height) {
-
-    this.width = width;
-    this.height = height;
-    this.draw = function () {
-        console.log('I am a rectangle');
-        this.printProperties();
-        console.log(this);
-    };
-    this.printProperties = function () {
-        console.log("My width is " + this.width);
-        console.log("My height is " + this.height);
-    };
-
-};
-
-var rect = new Rectangle(30, 40);
-rect.draw();
-
-function myNew(constructor) {
-    var obj = {};
-    Object.setPrototypeOf(obj, constructor.prototype);
-    var argsArray = Array.prototype.slice.apply(arguments);
-    console.log(argsArray)
-    constructor.apply(obj, argsArray.slice(1));
-    return obj;
+function myfunc(c, d) {
+    console.log(this.a + this.b + c + d);
 }
-
-
-var rect4 = myNew(Rectangle, 45, 30);
-rect4.draw();
+// myfunc.apply({ a: 10, b: 20 }, [3, 5]);
+var test =myfunc.bind({a:4,b:3})
+test(10,20)
