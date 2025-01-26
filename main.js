@@ -1,14 +1,22 @@
-var rect = {
-    width: 100,
-    height: 200,
-    draw: function () {
-        console.log('I am a rectangle');
-        console.log("my width is ", this.width);
-        console.log("my height is ", this.height);
-    }
+
+
+var createReact = function (width, height) {
+    return {
+        width: width,
+        height: height,
+        draw: function () {
+            console.log('I am a rectangle');
+            this.printProperties();
+            console.log(this);
+        },
+        printProperties: function () {
+            console.log("My width is " + this.width);
+            console.log("My height is " + this.height);
+        }
+    };
 };
-// console.log(rect.width);
-rect.draw(); 
-rect.width = 200;
-rect.height = 300;
-rect.draw(); 
+
+var rect = createReact(20, 40);
+rect.draw();
+var rect2 = createReact(80, 60);
+rect2.draw();
