@@ -1,8 +1,8 @@
-function myFunc() {
-    console.log(this.a + this.b);
+function myFunc(c, d) {
+    console.log(this.a + this.b + c + d);
 }
 var obj = {
     a: 10,
     b: 20
 };
-myFunc.call(obj);
+myFunc.apply(obj, [100, 200]);
