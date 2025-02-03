@@ -1,41 +1,32 @@
-var Rectangle = function (width, height) {
-    this.width = width;
-    this.height = height;
-    var position = {
-        x: 50,
-        y: -100
-    };
-    var printProperties = function () {
-        console.log('my width is ' + this.width);
-        console.log("my height is " + this.height);
-    }.bind(this);
+var width = 10;
+var height = 20;
 
-    /*    this.getPosition = function(){
-           return position
-       }; */
-    Object.defineProperty(this, 'position', {
-        get: function () {
-            return position;
-        },
-        set: function (value) {
-            position = value;
-        }
-    });
-
-    this.draw = function () {
-        console.log("I am rectangle");
-        printProperties();
-        console.log("Position:X = " + " " + position.x + ", Position:Y = " + position.y);
-    };
-};
-var rect = new Rectangle(20, 10);
-rect.draw();
-// console.log(rect.getPosition())
-console.log(rect.position);
-
-rect.position ={
-    x: 69,
-    y: 34
+function calculateArea(width, height) {
+    return width * height;
 }
 
-console.log(rect.position)
+function calculateRange(width, height) {
+    return 2 * (width, height);
+}
+
+var area = calculateArea(width, height);
+var range = calculateRange(width, height);
+
+console.log(area);
+console.log(range);
+
+var rect = {
+    width: 10,
+    height: 20,
+    calculateArea: function () {
+        return this.width * this.height;
+    },
+    calculateRange: function () {
+        return 2 * (this.width + this.height);
+    }
+};
+var area1 = rect.calculateArea();
+var area2 = rect.calculateRange();
+
+console.log(area1);
+console.log(area2);
