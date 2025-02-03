@@ -5,4 +5,8 @@ var obj = {
     a: 10,
     b: 20
 };
-myFunc.apply(obj, [100, 200]);
+// var testBind = myFunc.bind(obj, 10,20)
+// testBind()
+
+var testBind = myFunc.bind(obj)
+testBind(10,20)
