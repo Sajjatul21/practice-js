@@ -17,3 +17,15 @@ var baseObj = Object.getPrototypeOf(person);
 console.log(baseObj);
 var descriptor1 = Object.getOwnPropertyDescriptor(baseObj, "toString");
 console.log(descriptor1);
+
+Object.defineProperty(person, 'name', {
+    configurable: false,
+    enumerable: false,
+    writable: false
+});
+console.log(delete person.name);
+
+console.log(Object.keys(person));
+
+person.name = "Sajjatul Islam ";
+console.log(person);
