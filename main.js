@@ -12,3 +12,8 @@ for (var i in person) {
 console.log(Object.keys(person));
 var descriptor = Object.getOwnPropertyDescriptor(person, 'name');
 console.log(descriptor);
+
+var baseObj = Object.getPrototypeOf(person);
+console.log(baseObj);
+var descriptor1 = Object.getOwnPropertyDescriptor(baseObj, "toString");
+console.log(descriptor1);
