@@ -1,36 +1,10 @@
-function mixing(target, ...sources) {
-    Object.assign(target, ...sources);
-}
-var canWalk = {
-    walk: function () {
-        console.log("Walking...");
-    }
-};
-var canSwim = {
-    swim: function () {
-        console.log("Swimming...");
-    }
-};
+var age = 26;
+var name = 'Sajjatul Islam';
 
-var canEat = {
-    eat: function () {
-        console.log("Eating...");
-    }
-};
+console.log(`My name is ${name} and I am ${age} old. I am ${age < 18 ? "not " : ""}adult`);
 
-/* var person = Object.assign({}, canWalk, canEat);
-person.name = "Sajjatul Islam" */;
-function Person(name) {
-    this.name = name;
-}
-mixing(Person.prototype, canWalk, canEat);
-var person = new Person("Sajjatul");
-console.log(person);
-
-function GoldFish(name) {
-    this.name = name;
-}
-mixing(GoldFish.prototype, canEat, canSwim);
-var fish = new GoldFish("Oranda");
-console.log(fish);
-fish.swim()
+console.log(name.padStart(25));
+console.log(name.padEnd(25));
+console.log(name.padStart(25, "*"));
+console.log(name.padEnd(25, "f"));
+console.log("S".repeat(10));
