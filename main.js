@@ -1,17 +1,12 @@
-let person = {
-    name: 'Shihab',
-    email: "shihab@example.com",
-    address: {
-        city: "Chandpur",
-        country: "Bangladesh"
-    }
+var obj = {
+    a: 10,
+    b: 20
 };
-/* let name = person.name;
-console.log(name); */
+console.log(Object.entries(obj));
 
-let { name, email, address, address: { city, country } } = person;
-console.log(name);
-console.log(email);
-console.log(address);
-console.log(city);
-console.log(country);
+var objArr = [
+    ['a', 10],
+    ["b", 20]
+];
+
+console.log(Object.fromEntries(objArr));
