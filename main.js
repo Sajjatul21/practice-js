@@ -1,12 +1,15 @@
-function sqr(n = 1) {
-
-    return n * n;
-}
-console.log(sqr());
-
-function great(name = 'Sajjatul', msg) {
-    console.log(name.length);
-    console.log(`${msg}! ${name}`);
+function sum() {
+    let sum = 0;
+    // console.log(arguments)
+    for (let i = 0; i < arguments.length; i++) {
+        sum += arguments[i];
+    }
+    return sum;
 }
 
-great(null, "Hello");
+console.log(sum(1, 2, 3, 4, 5));
+
+function add(...rest) {
+    return rest.reduce((a, b) => a + b);
+}
+console.log(add(1, 2, 3, 4, 5))
