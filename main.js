@@ -19,5 +19,14 @@ Square.prototype = {
     }
 };
 var sqr = new Square(5);
-sqr.draw();
-console.log(sqr.toString());
+var sqr2 = new Square(10);
+
+console.log(sqr.hasOwnProperty("width"));
+console.log(sqr.hasOwnProperty("getWidth"));
+console.log(sqr.hasOwnProperty("draw"));
+console.log(sqr.hasOwnProperty("toString"));
+
+for (var i in sqr) {
+    // console.log(sqr[i]);
+    console.log(i);
+}
