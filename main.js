@@ -1,14 +1,23 @@
-let s1 = Symbol();
-let s2 = Symbol("Test symbol");
+let arr = [1, 2, 3, 4];
+/* for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+} */
 
-console.log(s1);
-console.log(s2);
-console.log(s1 == s2);
-
-let toss = {
-    Head: Symbol("Head"),
-    Tail: Symbol("Tail")
-};
-
-console.log(toss.Head);
-console.log(toss.Tail);
+function createIterator(collection) {
+    let i = 0;
+    return {
+        next() {
+            return {
+                done: i >= collection.length,
+                value: collection[i++]
+            };
+        }
+    };
+}
+let iterate = createIterator(arr);
+console.log(iterate);
+console.log(iterate.next());
+console.log(iterate.next());
+console.log(iterate.next());
+console.log(iterate.next());
+console.log(iterate.next());
