@@ -25,25 +25,29 @@ Square.prototype.common = function () {
 
 };
 
-var shape = new Shape();
-var sqr = new Square(57, "green");
-
-
-console.log(shape.common());
-console.log(sqr.common());
-
 function Circle(radius, color) {
     Shape.call(this, color);
     this.radius = radius;
 }
 extend(Circle, Shape);
 
-var c = new Circle(5, 'red');
+
 
 Circle.prototype.common = function () {
-    Shape.prototype.common.call(this);
+    // Shape.prototype.common.call(this);
     console.log('I am calling from Circle and I have Overriding');
 
 };
-console.log(c.common())
 
+
+var shape = new Shape();
+var sqr = new Square(57, "green");
+var c = new Circle(5, 'red');
+console.log(shape.common());
+console.log(sqr.common());
+console.log(c.common());
+
+var shapes = [shape, sqr, c];
+for (var i of shapes) {
+    i.common();
+}
