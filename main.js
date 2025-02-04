@@ -1,10 +1,12 @@
-var age = 26;
-var name = 'Sajjatul Islam';
+const name = 'Sajjatul Islam';
 
-console.log(`My name is ${name} and I am ${age} old. I am ${age < 18 ? "not " : ""}adult`);
+let age = 26;
+console.log(age);
+age = 27;
+console.log(age);
 
-console.log(name.padStart(25));
-console.log(name.padEnd(25));
-console.log(name.padStart(25, "*"));
-console.log(name.padEnd(25, "f"));
-console.log("S".repeat(10));
+{
+    let a = "another";
+    console.log(a);
+}
+// console.log(a);
