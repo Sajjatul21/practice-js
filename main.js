@@ -1,16 +1,14 @@
-var arr = [1, 2, 3];
-
-for (let i of arr) {
-    console.log(i);
+function* generator() {
+    yield 1;
+    yield 2;
+    yield 3;
 }
-
-for (let i of "Shihab") {
-    console.log(i);
-}
-/* let obj = {
-    a: 10,
-    b: 20
-};
-for (let i of obj) {
-    console.log(i);
-} */
+let iterate = generator();
+/* console.log(iterate.next());
+console.log(iterate.next());
+console.log(iterate.next());
+console.log(iterate.next()); */
+console.log(iterate.next().value);
+console.log(iterate.next().value);
+console.log(iterate.next().value);
+console.log(iterate.next().value);
