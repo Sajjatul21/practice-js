@@ -1,15 +1,31 @@
-var arr = [1, 2, 3];
-function* generator(collection) {
-    for (let i = 0; i < collection.length; i++) {
-        yield collection[i];
+let obj = {
+    start: 1,
+    end: 5,
+    /*  [Symbol.iterator]: function () {
+         let currentValue = this.start;
+         const self = this;
+         return {
+             next() {
+                 return {
+                     done: currentValue > self.end,
+                     value: currentValue > self.end ? undefined : currentValue++
+                 };
+             }
+         };
+     } */
+    [Symbol.iterator]: function* () {
+        let currentValue = this.start;
+        while (currentValue <= this.end) {
+            yield currentValue++;
+        }
     }
-}
-let iterate = generator(arr);
- console.log(iterate.next());
-console.log(iterate.next());
-console.log(iterate.next());
-console.log(iterate.next()); 
-/* console.log(iterate.next().value);
-console.log(iterate.next().value);
-console.log(iterate.next().value);
-console.log(iterate.next().value); */
+};
+
+let iterator = obj[Symbol.iterator]();
+// console.log(iterator.next().value);
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
+console.log(iterator.next());
