@@ -1,12 +1,17 @@
 function testMe() {
     console.log(this);
 }
-testMe();
+// testMe();
 
 let obj = {
     name: "Shihab",
-    print: () => {
-        console.log(this);
+    print: function () {
+        // console.log(this);
+        // let self = this;
+        setTimeout(function () {
+            console.log(this);
+            console.log(`Hello ${this.name}`);
+        }.bind(this), 1000);
     }
 };
 
