@@ -9,10 +9,13 @@ function Square(width) {
 Square.prototype = {
     draw: function () {
         console.log("Draw");
+
     },
     // method overwrite
     toString: function () {
+        this.getWidth();
         return 'my width is ' + this.width;
+
     }
 };
 var sqr = new Square(5);
