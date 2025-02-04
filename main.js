@@ -1,20 +1,16 @@
-let arr = [1, 2, 3, 4];
-/* for (let i = 0; i < arr.length; i++) {
-    console.log(arr[i]);
+var arr = [1, 2, 3];
+
+for (let i of arr) {
+    console.log(i);
+}
+
+for (let i of "Shihab") {
+    console.log(i);
+}
+/* let obj = {
+    a: 10,
+    b: 20
+};
+for (let i of obj) {
+    console.log(i);
 } */
-
-let iterate = arr[Symbol.iterator]();
-console.log(iterate);
-console.log(iterate.next());
-console.log(iterate.next());
-console.log(iterate.next());
-console.log(iterate.next());
-console.log(iterate.next());
-
-var str = "TEXT";
-let iterateText = str[Symbol.iterator]();
-console.log(iterateText.next());
-console.log(iterateText.next());
-console.log(iterateText.next());
-console.log(iterateText.next());
-console.log(iterateText.next());
