@@ -20,24 +20,30 @@ extend(Square, Shape);
 Square.prototype.draw = function () {
     console.log("Draw");
 };
+Square.prototype.common = function () {
+    console.log('I am calling from Square and I have Overriding');
+
+};
 
 var shape = new Shape();
 var sqr = new Square(57, "green");
 
-console.log(shape);
-console.log(sqr);
+
+console.log(shape.common());
+console.log(sqr.common());
 
 function Circle(radius, color) {
     Shape.call(this, color);
     this.radius = radius;
 }
 extend(Circle, Shape);
-Circle.prototype.common = function () {
-    console.log('I am common function');
-
-};
 
 var c = new Circle(5, 'red');
 
-console.log(c)
+Circle.prototype.common = function () {
+    Shape.prototype.common.call(this);
+    console.log('I am calling from Circle and I have Overriding');
+
+};
+console.log(c.common())
 
