@@ -1,12 +1,13 @@
-function Shape() {
-
+function Shape(color) {
+    this.color = color;
 }
 Shape.prototype.common = function () {
     console.log('I am common function');
 };
 
 
-function Square(width) {
+function Square(width, color) {
+    Shape.call(this, color);
     this.width = width;
 };
 
@@ -17,7 +18,7 @@ Square.prototype.draw = function () {
 };
 
 var shape = new Shape();
-var sqr = new Square(57);
+var sqr = new Square(57, "green");
 // console.log(sqr.common());
 console.log(shape);
 console.log(sqr);
