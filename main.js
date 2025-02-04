@@ -1,12 +1,13 @@
-const name = 'Sajjatul Islam';
-
-let age = 26;
-console.log(age);
-age = 27;
-console.log(age);
-
-{
-    let a = "another";
-    console.log(a);
+function add(a, b) {
+    return a + b;
 }
-// console.log(a);
+let sum = function () {
+    return a + b;
+};
+
+
+let sum2 = (a, b) => a + b;
+console.log(sum2(3, 4));
+
+let sqr = x => x * x;
+console.log(sqr(2));
