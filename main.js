@@ -1,13 +1,13 @@
-function add(a, b) {
-    return a + b;
+function testMe() {
+    console.log(this);
 }
-let sum = function () {
-    return a + b;
+testMe();
+
+let obj = {
+    name: "Shihab",
+    print: () => {
+        console.log(this);
+    }
 };
 
-
-let sum2 = (a, b) => a + b;
-console.log(sum2(3, 4));
-
-let sqr = x => x * x;
-console.log(sqr(2));
+obj.print();
