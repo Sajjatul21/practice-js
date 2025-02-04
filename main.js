@@ -1,12 +1,14 @@
-var obj = {
-    a: 10,
-    b: 20
+let s1 = Symbol();
+let s2 = Symbol("Test symbol");
+
+console.log(s1);
+console.log(s2);
+console.log(s1 == s2);
+
+let toss = {
+    Head: Symbol("Head"),
+    Tail: Symbol("Tail")
 };
-console.log(Object.entries(obj));
 
-var objArr = [
-    ['a', 10],
-    ["b", 20]
-];
-
-console.log(Object.fromEntries(objArr));
+console.log(toss.Head);
+console.log(toss.Tail);
