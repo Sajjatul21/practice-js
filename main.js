@@ -1,15 +1,9 @@
-function sum() {
-    let sum = 0;
-    // console.log(arguments)
-    for (let i = 0; i < arguments.length; i++) {
-        sum += arguments[i];
+let a = 10, b = 20;
+let obj = {
+    a, b,
+    print() {
+        console.log(a, b);
     }
-    return sum;
-}
-
-console.log(sum(1, 2, 3, 4, 5));
-
-function add(...rest) {
-    return rest.reduce((a, b) => a + b);
-}
-console.log(add(1, 2, 3, 4, 5))
+};
+console.log(obj);
+console.log(obj.print());
