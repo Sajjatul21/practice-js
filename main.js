@@ -1,14 +1,7 @@
-let listItem = document.getElementsByTagName('li');
-// let listItems = Array.from(listItem);
-
-[...listItem].forEach((i, index) => {
-    let text = i.innerHTML;
-    i.innerHTML = `(${index + 1} ${text})`;
-});
-
 let li = document.createElement('li');
+console.dir(li);
 li.className = 'list-group-item';
-li.setAttribute('title', 'i am four item');
-li.innerHTML = 'four';
+li.setAttribute('title', "I am four item");
+li.innerHTML = 'Four';
 let list = document.getElementById('list');
-list.appendChild(li);
+list.appendChild(li);  //appendChild accept node as parameter
