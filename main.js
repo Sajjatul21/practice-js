@@ -16,7 +16,10 @@ console.log(x.toString());
 var hex = 0xfff;
 var oct = 0o545;
 console.log(hex);
-console.log(oct)
+console.log(oct);
 
 
 
+var a = 10;
+var b = 3;
+console.log(a % b);
