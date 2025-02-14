@@ -1,36 +1,14 @@
-var a = 10;
-var b = 20;
-a += b;
-console.log(a);
+var n = -45.6;
+console.log(Math.abs(n));
 
-a -= b;
-console.log(a);
+console.log('floor', Math.floor(n));
+console.log('ceil', Math.ceil(n));
+console.log("round", Math.round(n));
+console.log("Max", Math.max(400, 500, 600));
+console.log("Min", Math.min(400, 500, 600));
 
-a *= b;
-console.log(a);
+console.log(Math.pow(2, 5));
+console.log(Math.sqrt(64));
 
-a /= b;
-console.log(a);
-
-a %= b;
-console.log(a);
-
-var num1 = 40;
-var num2 = 30;
-console.log(num1 == num2);
-console.log(num1 !== num2);
-console.log(num1 > num2);
-console.log(num1 < num2);
-
-num1 = 30;
-
-console.log(num1 <= num2);
-console.log(num1 >= num2);
-
-var c = '50';
-var d = 50;
-console.log(c == d);
-console.log(c === d);
-
-console.log(typeof (c));
-console.log(typeof (d));
+console.log(Math.random());
+console.log(Math.random() * 10 + 1);
