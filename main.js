@@ -11,4 +11,4 @@ console.log(n.toString());
 
 console.log(Infinity);
 console.log(String(Infinity));
-console.log(Boolean(Infinity));
+console.log(Boolean(-Infinity));
