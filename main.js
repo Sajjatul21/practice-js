@@ -1,16 +1,21 @@
-// primitive => Primitive type are define by javascript
+// string lateral
+var str = "string";
+console.log(str);
 
-/*
-     1. Number(1,2,3)
-    2. String("This is Text")
-    3. Boolean(true or false)
-    4. undefine
-    5. Null
- */
-// Object => Object type are user define data type
+//string 
 
-/*
-    1. Array
-    2. Object
-    3. Function
-*/
+var str1 = String('Shihab');
+var str2 = String(123);
+var str3 = String(3.1234);
+console.log(str1);
+console.log(str2);
+console.log(str3);
+
+var b1 = true;
+var b2 = false;
+console.log("Boolean lateral", b1, b2);
+
+var b3 = Boolean(false);
+var b4 = Boolean(true);
+console.log(b3);
+console.log(b4);
