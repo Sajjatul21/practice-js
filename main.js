@@ -1,29 +1,38 @@
-var date = new Date();
-// 0 - sunday, 1 - monday, 2 - tuesday
-var today = date.getDay();
-console.log(today);
-switch (today) {
-    case 0:
-        console.log("To Day is Sunday");
-        break;
-    case 1:
-        console.log("Today is Monday");
-        break;
+var n = 10;
 
-    case 3:
-        console.log("To Day is Tuesday");
-        break;
-    case 4:
-        console.log("Today is Wednesday");
-        break;
-    case 5:
-        console.log("To Day is Thursday");
-        break;
-    case 6:
-        console.log("Today is Friday");
-        break;
-    default:
-        console.log("day is not available");
+var str = '';
 
-
+if (n % 2 == 0) {
+    str = "Even";
 }
+else {
+    str = "Odd";
+}
+console.log(str);
+
+var result = n % 2 == 0 ? "even" : "Odd";
+console.log(result);
+
+/* var name = '';
+var fullName = "";
+if (name.length == 0) {
+    fullName = "Sajjatul";
+}
+else {
+    fullName = name;
+}
+console.log(fullName);
+
+ */
+
+var name = '';
+var fullName = name || "Shihab";
+console.log(fullName);
+
+var isOk = true
+
+if (isOk){
+    console.log("EveryThing ok")
+}
+
+isOk && console.log("Everything is Ok")
