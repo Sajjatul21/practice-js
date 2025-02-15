@@ -1,10 +1,7 @@
+// string literal
+var str = "Shihab";
+console.log(str);
 
-
-for (var i = 1; i <= 10; i++) {
-    if (i % 5 == 0) {
-        continue;
-    }
-    else {
-        console.log(i);
-    }
-}
+// string constructor
+var str2 = String("Sajjatul Islam");
+console.log(str2);
