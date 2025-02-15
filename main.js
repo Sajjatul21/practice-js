@@ -1,10 +1,17 @@
-var isRunning = false;
-
-while (isRunning) {
-    console.log("I am Running");
+var n = 5;
+for (var i = 1; i <= n; i++) {
+    var result = '';
+    for (var j = 1; j <= i; j++) {
+        // console.log(j);
+        result = result + j + " ";
+    }
+    console.log(result);
 }
 
-do {
-    console.log("I am Running");
+for (var i = 1; i <= n; i++) {
+    var result = '';
+    for (var j = 1; j <= n; j++) {
+        result += "* ";
+    }
+    console.log(result);
 }
-while(isRunning)
