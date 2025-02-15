@@ -1,11 +1,20 @@
-var str = "This s a \'String\'";
-console.log(str);
+var a = "I am";
+var b = "Sajjatul Islam";
+var c = a.concat(" " + b);
+console.log(c);
 
-var str1 = 'This is a \n string';
-console.log(str1);
+// var d = c.substr(5);
+// var d = c.substr(5,2)
+var d = c.substr(5, 4);
 
-var str2 = "This is a \tString";
-console.log(str2);
+console.log(d);
 
-var str3 = "This is a \\String";
-console.log(str3);
+console.log(c.charAt(7));
+console.log(c.startsWith("s"));
+console.log(c.endsWith("am"));
+console.log(a.toUpperCase());
+console.log(b.toLocaleLowerCase());
+
+console.log('            sajjatul islam    '.trim());
+
+console.log(c.split(' '));
