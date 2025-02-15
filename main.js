@@ -1,16 +1,11 @@
-// string literal
-var str = "Shihab";
+var str = "This s a \'String\'";
 console.log(str);
 
-// string constructor
-var str2 = String("Sajjatul Islam");
+var str1 = 'This is a \n string';
+console.log(str1);
+
+var str2 = "This is a \tString";
 console.log(str2);
 
-var n = 10;
-
-var str3 = n + ''
-var str4 = n.toString()
-var str5 = String(n)
-console.log(str3)
-console.log(str4)
-console.log(str5)
+var str3 = "This is a \\String";
+console.log(str3);
