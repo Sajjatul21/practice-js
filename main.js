@@ -1,25 +1,17 @@
-function something(greet, name) {
-    function sayHi() {
-        console.log(greet, name
-        );
-    }
-    sayHi();
-}
-something("Good Morning", "Shihab");
+var a = 'abc';
 
-function message(greet, name) {
-    function getFirstName() {
-        if (name) {
-            return name.split(" ")[0];
-        }
-        else {
-            return '';
+if (true) {
+    if (true) {
+        var b = 'I am B';
+        function x() {
+            // var a = 20;
+            function y() {
+                // var a = 10;
+                console.log(a);
+            }
+           
+            y();
         }
     }
-    var message = greet + " " + getFirstName();
-    console.log(message);
 }
-
-message("Good Morning","Sajjatul Islam")
-message("Good MOrning", "Shihab")
-message("Good MOrning")
+x();
