@@ -1,20 +1,18 @@
-var a = "I am";
-var b = "Sajjatul Islam";
-var c = a.concat(" " + b);
-console.log(c);
+var arr = [1, 2, 3, 4];
+console.log(arr);
 
-// var d = c.substr(5);
-// var d = c.substr(5,2)
-var d = c.substr(5, 4);
+console.log(arr[1]);
+console.log(arr[0]);
 
-console.log(d);
+arr[2] = 25;
+arr[0] = 34;
 
-console.log(c.charAt(7));
-console.log(c.startsWith("s"));
-console.log(c.endsWith("am"));
-console.log(a.toUpperCase());
-console.log(b.toLocaleLowerCase());
+console.log(arr);
 
-console.log('            sajjatul islam    '.trim());
+var arr2 = Array();
+console.log(arr2);
+var arr3 = Array(1, 2, 3);
+console.log(arr3);
 
-console.log(c.split(' '));
+arr3[5] = 1000
+console.log(arr3)
