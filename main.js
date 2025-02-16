@@ -1,13 +1,23 @@
-var obj = {
-    x: 10,
-    y: 20,
-    z: 30
-};
-/* console.log(Object.keys(obj));
-console.log(Object.values(obj));
-console.log(Object.entries(obj)); */
+var date = new Date();
+date.getFullYear();
 
-var obj2 = Object.assign({}, obj)
-    obj2.x = 100;
-console.log(obj)
-console.log(obj2)
+function functionName() {
+    console.log("I am a function");
+}
+
+function add() {
+    var a = 10;
+    var b = 20;
+    console.log(a + b);
+}
+function sub() {
+    var a = 10;
+    var b = 20;
+    console.log(a - b);
+}
+
+for (var i = 0; i < 5; i++) {
+    functionName();
+}
+add();
+sub();
