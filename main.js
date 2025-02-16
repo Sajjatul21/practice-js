@@ -1,23 +1,37 @@
-function add(a, b) {
-    return a + b;
+var b = 10;
+function a() {
+    console.log(b);
 }
+a();
 
+function outer() {
+    var outerVariable = "I am from outer function";
 
-function manipulated(a, b, func) {
-    var c = a + b;
-    var d = a - b;
-
-    /* function multiply() {
-        var m = func(a, b);
-        return c * d * m;
+    function inner() {
+        return outerVariable;
     }
-    return multiply; */
+    return inner;
+}
+var closureExample = outer();
+console.log(closureExample());
+
+function closure() {
+    var x = 5;
     return function () {
-        var m = func(a, b);
-        return c * d * m;
+        console.log(x);
     };
 }
 
-var multiply = manipulated(4, 3, add);
-console.log(typeof multiplyj);
-console.log(multiply());
+var abc = closure();
+console.dir(abc);
+
+function outerFunction() {
+    var outerVariable = 'Accessing outer function';
+    function innerFunction() {
+        console.log(outerVariable);
+    }
+    return innerFunction;
+}
+
+var myClosure = outerFunction();
+myClosure();
