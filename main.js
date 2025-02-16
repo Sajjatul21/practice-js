@@ -1,39 +1,25 @@
-function sample(a, b, callback) {
-    var c = a + b;
-    var d = a - b;
-
-    var result = callback(c, d);
-    return result;
-}
-
-function sum(a, b) {
-    return a + b;
-}
-
-var result = sample(5, 3, sum);
-console.log(result);
-
-var result2 = sample(5, 3, function (c, d) {
-    return c - d;
+var arr = [1, 2, 3, 4, 5];
+var sum = 0;
+arr.forEach(function (value, index, arr) {
+    // console.log(value, index, arr);
+    sum += value;
 });
-console.log(result2);
+// console.log(sum);
 
-var result3 = sample(8, 5, function (a, b) {
-    return a * b;
-});
-console.log(result3);
-
-var result4 = sample(6, 5, function (a, b) {
-    return a / b;
-});
-console.log(result4);
-
-function display(some) {
-    console.log(some);
+function forEach(arr, callback) {
+    for (var i = 0; i < arr.length; i++) {
+        // console.log(arr[i]);
+        callback(arr[i], i, arr);
+    }
 }
 
-function calculate(num1, num2, callback) {
-    let sum = num1 + num2;
-    callback(sum);
-}
-let total = calculate(5, 5, display);
+forEach(arr, function (value, index, arr) {
+    console.log(value, index, arr);
+    sum += value;
+});
+console.log(sum);
+
+forEach(arr, function (value, index, arr) {
+    arr[index] = value + 5;
+});
+console.log(arr);
