@@ -1,18 +1,21 @@
-var arr = [1, 2, 3, 4];
-console.log(arr);
+var arr = [1, 4, 3, 9, 8, 5, 7];
 
-console.log(arr[1]);
-console.log(arr[0]);
+for (var i = 0; i < arr.length; i++) {
+    // console.log(i);
+    // console.log(arr[0]);
+    // console.log(arr[i]);
+    arr[i] = arr[i] + 2;
+    console.log(arr[i]);
+}
 
-arr[2] = 25;
-arr[0] = 34;
+var sum = 0;
+for (var i = 0; i < arr.length; i++) {
+    sum = sum + arr[i];
+}
+console.log("Total sum:", sum);
 
-console.log(arr);
-
-var arr2 = Array();
-console.log(arr2);
-var arr3 = Array(1, 2, 3);
-console.log(arr3);
-
-arr3[5] = 1000
-console.log(arr3)
+for (var i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 == 0) {
+        console.log(arr[i]);
+    }
+}
