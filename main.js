@@ -1,12 +1,20 @@
-var arr = [1, 4, 3, 9, 8, 5, 7];
-// arr[2] = 55
-// arr.push(9)
-// arr.unshift(20);
-arr.splice(2, 0, 1000);
+// var arr = [1, 2, 52, 70, 2, 74, 83, 26];
 
-// arr[2] = undefined
-/* arr.pop()
-arr.shift() */
-// arr.splice(2,1)
-arr.splice(2,1, 2000, 3000)
-console.log(arr);
+var arr = [
+    [87, 56, 79, 100],
+    [58, 78, 98, 90],
+    [96, 79, 45, 99]
+];
+
+/* console.log(arr[0])
+console.log(arr[1])
+
+console.log(arr[0][0]) */
+
+
+
+for (var i = 1; i < arr.length; i++) {
+    for (var j = 0; j < arr[i].length; j++) {
+        console.log("Element " + i + ": " + arr[i][j]);
+    }
+} 
