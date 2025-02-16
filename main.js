@@ -1,37 +1,39 @@
-var b = 10;
-function a() {
-    console.log(b);
-}
-a();
+function sample(a, b, callback) {
+    var c = a + b;
+    var d = a - b;
 
-function outer() {
-    var outerVariable = "I am from outer function";
-
-    function inner() {
-        return outerVariable;
-    }
-    return inner;
-}
-var closureExample = outer();
-console.log(closureExample());
-
-function closure() {
-    var x = 5;
-    return function () {
-        console.log(x);
-    };
+    var result = callback(c, d);
+    return result;
 }
 
-var abc = closure();
-console.dir(abc);
-
-function outerFunction() {
-    var outerVariable = 'Accessing outer function';
-    function innerFunction() {
-        console.log(outerVariable);
-    }
-    return innerFunction;
+function sum(a, b) {
+    return a + b;
 }
 
-var myClosure = outerFunction();
-myClosure();
+var result = sample(5, 3, sum);
+console.log(result);
+
+var result2 = sample(5, 3, function (c, d) {
+    return c - d;
+});
+console.log(result2);
+
+var result3 = sample(8, 5, function (a, b) {
+    return a * b;
+});
+console.log(result3);
+
+var result4 = sample(6, 5, function (a, b) {
+    return a / b;
+});
+console.log(result4);
+
+function display(some) {
+    console.log(some);
+}
+
+function calculate(num1, num2, callback) {
+    let sum = num1 + num2;
+    callback(sum);
+}
+let total = calculate(5, 5, display);
