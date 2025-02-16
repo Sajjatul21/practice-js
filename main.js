@@ -1,43 +1,25 @@
-function add(a, b) {
-    var result = a + b;
-    console.log(result);
-}
-add(10, 20);
-
-function sub(a, b) {
-    var result = a - b;
-    console.log(result);
-}
-
-sub(20, 5);
-
-var arr1 = [23, 43, 64];
-var arr2 = [65, 83, 94];
-var arr3 = [5, 85, 90];
-
-var sum = 0;
-for (var i = 0; i < arr1.length; i++) {
-    sum += arr1[i];
-}
-console.log(sum);
-
-function test() {
-    // console.log(arguments);
-    for (var i = 0; i < arguments.length; i++) {
-        // console.log(arguments[i]);
-        sum += arguments[i];
+function something(greet, name) {
+    function sayHi() {
+        console.log(greet, name
+        );
     }
-    return sum;
+    sayHi();
+}
+something("Good Morning", "Shihab");
+
+function message(greet, name) {
+    function getFirstName() {
+        if (name) {
+            return name.split(" ")[0];
+        }
+        else {
+            return '';
+        }
+    }
+    var message = greet + " " + getFirstName();
+    console.log(message);
 }
 
-var result = test(1, 2, 3, 4, 6, 7, 8, 9, 10);
-console.log(result);
-
-function person(name, email) {
-    return {
-        name: name,
-        email: email
-    };
-}
-var p1 = person("Shihab", 'dev.sajjatul@email.com');
-console.log(p1);
+message("Good Morning","Sajjatul Islam")
+message("Good MOrning", "Shihab")
+message("Good MOrning")
