@@ -1,21 +1,12 @@
 var arr = [1, 4, 3, 9, 8, 5, 7];
+// arr[2] = 55
+// arr.push(9)
+// arr.unshift(20);
+arr.splice(2, 0, 1000);
 
-for (var i = 0; i < arr.length; i++) {
-    // console.log(i);
-    // console.log(arr[0]);
-    // console.log(arr[i]);
-    arr[i] = arr[i] + 2;
-    console.log(arr[i]);
-}
-
-var sum = 0;
-for (var i = 0; i < arr.length; i++) {
-    sum = sum + arr[i];
-}
-console.log("Total sum:", sum);
-
-for (var i = 0; i < arr.length; i++) {
-    if (arr[i] % 2 == 0) {
-        console.log(arr[i]);
-    }
-}
+// arr[2] = undefined
+/* arr.pop()
+arr.shift() */
+// arr.splice(2,1)
+arr.splice(2,1, 2000, 3000)
+console.log(arr);
