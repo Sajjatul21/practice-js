@@ -27,6 +27,17 @@ function test() {
         // console.log(arguments[i]);
         sum += arguments[i];
     }
-    console.log(sum);
+    return sum;
 }
-test(1, 2, 3, 4, 6, 7, 8, 9, 10);
+
+var result = test(1, 2, 3, 4, 6, 7, 8, 9, 10);
+console.log(result);
+
+function person(name, email) {
+    return {
+        name: name,
+        email: email
+    };
+}
+var p1 = person("Shihab", 'dev.sajjatul@email.com');
+console.log(p1);
