@@ -21,13 +21,12 @@ for (var i = 0; i < arr1.length; i++) {
 }
 console.log(sum);
 
-function sumOfArray(arr) {
-    var sum = 0;
-    for (var i = 0; i < arr.length; i++) {
-        sum += arr[i];
+function test() {
+    // console.log(arguments);
+    for (var i = 0; i < arguments.length; i++) {
+        // console.log(arguments[i]);
+        sum += arguments[i];
     }
     console.log(sum);
 }
-sumOfArray(arr1)
-sumOfArray(arr2)
-sumOfArray(arr3)
+test(1, 2, 3, 4, 6, 7, 8, 9, 10);
