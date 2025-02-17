@@ -1,41 +1,16 @@
-function sayHi(n) {
-    if (n == 0) {
-        return;
-    }
-    console.log(n, "Hi, I am calling");
-    sayHi(n - 1);
-}
-sayHi(5);
-
-function sum(n) {
-    if (n == 1) {
-        return 1;
-    }
-    return n + sum(n - 1);
-}
-console.log(sum(5));
-
-
-
-function fact(n) {
-    if (n == 1) {
-        return 1;
-    }
-    return n * fact(n - 1);
-}
-console.log(fact(4));
-console.log(fact(3));
-
-
-
-
-var arr = [1, 2, 3, 4, 5];
-
-function sumOfArray(arr, lastIndex) {
-    if (lastIndex < 0) {
-        return 0;
-    }
-    return arr[lastIndex] + sumOfArray(arr, lastIndex - 1);
+function add(a, b, c) {
+    return a + b + c;
 }
 
-console.log(sumOfArray(arr, arr.length - 1));
+console.log(add(2, 3, 4));
+
+function curring(a) {
+    return function (b) {
+        return function (c) {
+            return a + b + c;
+        };
+    };
+}
+
+var result = curring(2)(3)(4);
+console.log(result);
