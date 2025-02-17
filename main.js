@@ -1,67 +1,41 @@
-var persons = [
-    {
-        name: "A",
-        age: 24
-    },
-    {
-        name: "B",
-        age: 19
-    },
-    {
-        name: "C",
-        age: 25
-    },
-    {
-        name: "D",
-        age: 21
+function sayHi(n) {
+    if (n == 0) {
+        return;
     }
-];
+    console.log(n, "Hi, I am calling");
+    sayHi(n - 1);
+}
+sayHi(5);
 
-var arr = [5, 4, 3, 8, 1, 7, 0, 6, 5, 7, 2];
-arr.sort();
-console.log(arr);
-var arr1 = [5, 4, 3, 8, 1, 7, 0, 6, 5, 7, 2, -1, -4, -8];
-arr1.sort(function (a, b) {
-    if (a > b) {
-        // return 1;
-        return -1;
-    }
-    else if (a < b) {
-        // return -1;
+function sum(n) {
+    if (n == 1) {
         return 1;
     }
-    else {
-        return 0;
-    }
-});
-console.log(arr1);
+    return n + sum(n - 1);
+}
+console.log(sum(5));
 
-persons.sort(function (a, b) {
-    if (a.age > b.age) {
+
+
+function fact(n) {
+    if (n == 1) {
         return 1;
     }
-    else if (a.age < b.age) {
-        return -1;
-    }
-    else {
+    return n * fact(n - 1);
+}
+console.log(fact(4));
+console.log(fact(3));
+
+
+
+
+var arr = [1, 2, 3, 4, 5];
+
+function sumOfArray(arr, lastIndex) {
+    if (lastIndex < 0) {
         return 0;
     }
-});
+    return arr[lastIndex] + sumOfArray(arr, lastIndex - 1);
+}
 
-console.log(persons);
-
-var res1 = arr1.every(function (value) {
-    return value >= 0;
-});
-console.log(res1);
-
-var res3 = arr.some(function (value) {
-    return value % 2 == 1;
-});
-console.log(res3);
-var arr2 = [5, 4, 3, 8, 1, 7, 6, 5, 7, -2];
-var res4 = arr2.some(function (value) {
-    return value < 0;
-});
-
-console.log(res4);
+console.log(sumOfArray(arr, arr.length - 1));
