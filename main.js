@@ -1,21 +1,27 @@
-var arr = [2, 5, 2, 7, 8, 5, 4, 9, 5, 8, 4];
-
-var filterArr = arr.filter(function (value) {
-    return value > 4;
+var arr = [2, 4, 3, 7, 5, 8, 9, 6];
+var sum = arr.reduce(function (previousValue, currentValue) {
+    return previousValue + currentValue;
 });
+// console.log(sum);
 
-// console.log(filterArr);
+var max = arr.reduce(function (previousValue, currentValue) {
+    return Math.max(previousValue, currentValue);
+}, 0);
+// console.log(max);
 
-function filter(arr, callback) {
-    var newArr = [];
+function reduce(arr, callback, acc) {
     for (var i = 0; i < arr.length; i++) {
-        if (callback(arr[i], i, arr)) {
-            newArr.push(arr[i]);
-        }
+        acc = callback(acc, arr[i]);
     }
-    return newArr;
+    return acc;
 }
-var odd = filter(arr, function (value, index, arr) {
-    return value % 2 == 0;
-});
-console.log(odd);
+
+var sum1 = reduce(arr, function (previousValue, currentValue) {
+    return previousValue + currentValue;
+}, 0);
+
+var max1 = reduce(arr, function (previousValue, currentValue) {
+    return Math.max(previousValue, currentValue);
+}, arr[0]);
+
+console.log(max1);
