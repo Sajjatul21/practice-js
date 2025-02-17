@@ -1,28 +1,21 @@
-var arr = [1, 2, 3, 4, 5];
-var sqr = arr.map(function (value, index, arr) {
-    // return Math.random ()* 100;
-    return value * value;
+var arr = [2, 5, 2, 7, 8, 5, 4, 9, 5, 8, 4];
+
+var filterArr = arr.filter(function (value) {
+    return value > 4;
 });
 
-console.log(arr);
-console.log(sqr);
+// console.log(filterArr);
 
-function map(arr, callback) {
-    var newArray = [];
+function filter(arr, callback) {
+    var newArr = [];
     for (var i = 0; i < arr.length; i++) {
-        // var temp = arr[i] * arr[i];
-        var temp = callback(arr[i], i, arr);
-        newArray.push(temp);
+        if (callback(arr[i], i, arr)) {
+            newArr.push(arr[i]);
+        }
     }
-    return newArray;
+    return newArr;
 }
-var myMap = map(arr, function (value, index, arr) {
-    return value * value;
+var odd = filter(arr, function (value, index, arr) {
+    return value % 2 == 0;
 });
-console.log(myMap);
-
-var qubArr = map(arr, function (value) {
-    return value * value * value;
-});
-
-console.log(qubArr);
+console.log(odd);
