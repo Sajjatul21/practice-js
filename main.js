@@ -1,13 +1,13 @@
-function print(inp) {
-    console.log(inp);
-}
+var a = 10;
 
-function multiplyByFive(n) {
-    return n * 5;
-}
+var b;
+console.log('a is', a);
+console.log('b is ', b);
 
-function add(a, b) {
-    return a + b;
-}
+var b = 20;
+console.log('b is ', b);
+console.log('c is', c);
 
-print(multiplyByFive(add(2, 3)));
+var c = 30;
+
+console.log('c is', c);
