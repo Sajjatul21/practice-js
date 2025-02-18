@@ -20,3 +20,12 @@ var sqr2 = new Square(10);
 
 console.log(sqr1);
 console.log(sqr2);
+
+console.log(sqr1.hasOwnProperty("width"))
+console.log(sqr1.hasOwnProperty("draw"))
+
+console.log(Object.keys(sqr1))
+
+for(var i in sqr1){
+    console.log(i)
+}
