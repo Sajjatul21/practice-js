@@ -1,15 +1,14 @@
-var globalVar = 'I am global variable'
+var x = 55;
+function test() {
+    var x = 45;
+    console.log(x)
 
-function exampleFunction(){
-    var functionVar = " I am function-scope variable"
-    console.log(globalVar)
-    console.log(functionVar)
+    function nested() {
+        var y = 55;
+        console.log(x);
+    }
+    // console.log(y);
+    nested();
 }
 
-exampleFunction()
-
-if(true){
-    let blockVar  = 'I am block-scope variable'
-    console.log(blockVar)
-}
-// console.log(blockVar) referenceError 
+test();
