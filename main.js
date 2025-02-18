@@ -1,10 +1,15 @@
-abc();
-function abc() {
-    console.log("I am Function");
+var globalVar = 'I am global variable'
+
+function exampleFunction(){
+    var functionVar = " I am function-scope variable"
+    console.log(globalVar)
+    console.log(functionVar)
 }
 
-var newAbc = function () {
-    console.log("I am new Function");
-};
+exampleFunction()
 
-newAbc(); 
+if(true){
+    let blockVar  = 'I am block-scope variable'
+    console.log(blockVar)
+}
+// console.log(blockVar) referenceError 
