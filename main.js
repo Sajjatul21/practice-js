@@ -1,5 +1,5 @@
-function Shape() {
-
+function Shape(color) {
+    this.color = color;
 }
 Shape.prototype = {
     common: function () {
@@ -8,7 +8,8 @@ Shape.prototype = {
 };
 
 
-function Square(width) {
+function Square(width, color) {
+    Shape.call(this, color);
     this.width = width;
 }
 Square.prototype = Object.create(Shape.prototype);
@@ -17,7 +18,7 @@ Square.prototype.draw = function () {
     console.log("Drawing");
 };
 
-var sqr = new Square(56);
+var sqr = new Square(56, "Green");
 
 
 function Circle() {
