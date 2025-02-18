@@ -1,31 +1,26 @@
-function Square(width) {
-    this.width = width;
-    this.getWidth = function () {
-        console.log("Width is " + this.width);
-        // this.draw();
-    };
+function Shape() {
 
 }
-Square.prototype = {
-    draw: function () {
-        console.log('Draw');
-        this.getWidth();
-    },
-    toString: function () {
-        console.log("MY width is " + this.width);
+Shape.prototype = {
+    common: function () {
+        console.log("I am common function");
     }
 };
-var sqr1 = new Square(5);
-var sqr2 = new Square(10);
 
-console.log(sqr1);
-console.log(sqr2);
 
-console.log(sqr1.hasOwnProperty("width"))
-console.log(sqr1.hasOwnProperty("draw"))
-
-console.log(Object.keys(sqr1))
-
-for(var i in sqr1){
-    console.log(i)
+function Square(width) {
+    this.width = width;
 }
+Square.prototype = Object.create(Shape.prototype);
+Square.prototype.draw = function () {
+    console.log("Drawing");
+};
+
+var sqr = new Square(56);
+
+
+function Circle() {
+
+}
+Circle.prototype = Object.create(Shape.prototype);
+var c = new Circle();
