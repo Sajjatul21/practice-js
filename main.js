@@ -19,9 +19,31 @@ var rect = {
         return this.width * this.height;
     },
     calculateRange: function () {
-        return 2(this.width + this.height);
+        return 2 * (this.width + this.height);
     }
 };
 
 var area1 = rect.calculateArea();
 var range1 = rect.calculateRange();
+
+class ClassName {
+    constructor(property1, property2) {
+        this.property1 = property1;
+        this.property2 = property2;
+    }
+    method1() {
+        console.log(`property1: ${this.property1}`);
+    }
+    method2() {
+        console.log(`Property2: ${this.property2}`);
+    }
+
+    static staticMethod() {
+        console.log('This is a static method');
+    }
+}
+
+const obj = new ClassName("Value1", "Value2");
+obj.method1();
+obj.method2();
+ClassName.staticMethod();
