@@ -1,27 +1,20 @@
-var person = {
-    name: "Shihab"
-};
+function Square(width) {
+    this.width = width;
+    this.draw = function () {
+        console.log("draw");
+    };
 
-console.log(person);
-console.log(person.toString());
-
-for (var i in person) {
-    console.log(i);
 }
+Square.prototype = {
+    draw: function () {
+        console.log('Draw');
+    },
+    toString: function () {
+        console.log("MY width is " + this.width);
+    }
+};
+var sqr1 = new Square(5);
+var sqr2 = new Square(10);
 
-console.log(Object.keys(person));
-
-var descriptor = Object.getOwnPropertyDescriptor(person, "name");
-console.log(descriptor);
-
-var baseObj = Object.getPrototypeOf(person);
-// console.log(baseObj)
-
-var stringDescriptor = Object.getOwnPropertyDescriptor(baseObj, "toString");
-console.log(stringDescriptor);
-
-Object.defineProperty(person, 'name', {
-    configurable: false,
-    enumerable: false,
-    writable: false
-});
+console.log(sqr1);
+console.log(sqr2);
