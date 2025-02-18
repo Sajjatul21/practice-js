@@ -30,4 +30,8 @@ function Circle(color, radius) {
     this.radius = radius;
 }
 extend(Shape, Circle);
+Circle.prototype.common = function () {
+    console.log("I am calling from Circle. and I have overridden");
+    Shape.prototype.common.call(this);
+};
 var c = new Circle('Red', 5);
