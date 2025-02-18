@@ -1,31 +1,25 @@
-function myFunc() {
-    console.log(this);
-}
-myFunc();
-new myFunc();
+var createReact = function (width, height) {
+    return {
+        width: width,
+        height: height,
 
-
-var rect = {
-    width: 100,
-    height: 200,
-    draw: function () {
-        console.log("I am a rectangle");
-        this.printProperties();
-        console.log(this);
-    },
-
-    printProperties: function () {
-        console.log("My width is", this.width);
-        console.log("My height is", this.height);
-    }
+        draw: function () {
+            console.log("I am rectangle");
+            this.printProperties();
+            console.log(this);
+        }
+        ,
+        printProperties: function () {
+            console.log("My width is", width);
+            console.log('My height is', height);
+        }
+    };
 };
 
-rect.draw();
+var react = createReact(10, 5);
+// console.log(react);
+react.draw()
 
-var another = {
-    width: 59,
-    height: 63,
-    print: rect.printProperties
-};
-
-another.print();
+var react2 = createReact(100, 200)
+console.log(react2)
+react2.draw()
