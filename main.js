@@ -1,21 +1,17 @@
-var n = 10;
-function change(n) {
-    n += 100;
-    console.log(n);
-}
+var Rectangle = function (width, height) {
+    this.width = width;
+    this.height = height;
 
-change(n);
-console.log(n);
-
-var obj = {
-    a: 10, b: 20
+    var printProperties = function () {
+        console.log("my width is " + this.width);
+        console.log('My height is ' + this.height);
+    };
+    this.draw = function () {
+        console.log("I am rectangle");
+        printProperties.call(this);
+    };
 };
 
-function changeMe(obj) {
-    obj.a = obj.a + 100;
-    obj.b = obj.b + 200;
-    console.log(obj);
-}
-
-changeMe(obj);
-console.log(obj);
+var rect = new Rectangle(4, 5);
+// rect.printProperties()error
+rect.draw();
