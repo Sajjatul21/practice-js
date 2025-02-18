@@ -1,7 +1,10 @@
+var a = 100; 
+print(20)
+// newPrint(a)
+var newPrint= print
+newPrint(53)
 
-abc()
-function abc (){
-    console.log("I am function")
+function print(a){
+    console.log(a)
 }
-
-abc()
+print(a)
