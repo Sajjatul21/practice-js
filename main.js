@@ -1,14 +1,19 @@
-var x = 55;
 function test() {
-    var x = 45;
-    console.log(x)
-
-    function nested() {
-        var y = 55;
-        console.log(x);
+    var msg = 'I am learning lexical scope and closure';
+    function sayMsg() {
+        console.log(msg);
     }
-    // console.log(y);
-    nested();
+    sayMsg();
 }
 
-test();
+function test1() {
+    var msg = 'I am learning lexical scope and closure';
+
+    return function () {
+        console.log(msg);
+    };
+}
+
+var sayMsg = test1();
+console.log(sayMsg);
+sayMsg();
