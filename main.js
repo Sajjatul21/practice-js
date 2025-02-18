@@ -1,17 +1,19 @@
-var Rectangle = function (width, height) {
-    this.width = width;
-    this.height = height;
-
-    this.draw = function () {
-        console.log("I am rectangle");
-        this.printProperties();
-        console.log(this);
-    };
-    this.printProperties = function () {
-        console.log("My width is", this.width);
-        console.log("My height is", this.height);
-    };
-};
-
-var rect = new Rectangle(2,3);
-rect.draw();
+/* function myFunc(c, d) {
+    console.log(this.a + this.b + c + d);
+    console.log(this);
+} */
+// myFunc.call({ a: 10, b: 20 });
+/* 
+function myFunc(c, d) {
+    console.log(this.a + this.b + c + d);
+    console.log(this);
+}
+myFunc.apply({ a: 10, b: 20 }, [40, 50]); */
+function myFunc(c, d) {
+    console.log(this.a + this.b + c + d);
+    console.log(this);
+}/* 
+var result = myFunc.bind({ a: 10, b: 20 }, 10, 20);
+console.log(result()) */;
+var testBind = myFunc.bind({ a: 20, b: 30 });
+testBind(50, 60);
