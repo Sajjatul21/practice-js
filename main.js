@@ -12,6 +12,7 @@ function Square(width) {
     this.width = width;
 }
 Square.prototype = Object.create(Shape.prototype);
+Square.prototype.constructor = Square;
 Square.prototype.draw = function () {
     console.log("Drawing");
 };
@@ -23,4 +24,5 @@ function Circle() {
 
 }
 Circle.prototype = Object.create(Shape.prototype);
+Circle.prototype.constructor = Circle;
 var c = new Circle();
