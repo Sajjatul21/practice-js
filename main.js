@@ -1,12 +1,33 @@
-let arr = [1, 2, 3, 4, 5];
-let sqrArr = arr.map(v => v * v);
-console.log(sqrArr);
+let p1 = new Promise((resolve, reject) => {
+    setTimeout(resolve, 5000, 'one');
+});
 
-function asyncMap(arr, callback) {
-    return arr.map(v => {
-        // setTimeout(callback.bind(null, v), 0);
-        setTimeout(()=>callback(v),0)
+let p2 = new Promise((resolve, reject) => {
+    setTimeout(resolve, 300, 'tow');
+});
+/* 
+console.log(p1)
+console.log(p2) */
+
+p1.then(v => {
+    console.log(v);
+}).catch(e => console.log(e));
+
+
+function getIphone(isPassed) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (isPassed) {
+                resolve("I have got an iPhone");
+            }
+            else {
+                reject(new Error("you got Failed"));
+            }
+        }, 2000);
     });
 }
 
-let qbArr = asyncMap(arr,v=>console.log(v*v*v))
+// getIphone(false)
+getIphone(true)
+    .then(res => console.log(res))
+    .catch(e => console.log(e.message));
