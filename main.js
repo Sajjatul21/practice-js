@@ -1,19 +1,14 @@
-// function declaration
-function add(a, b) {
-    return a + b;
+function testMe() {
+    console.log(this);
 }
 
-// function expression
-let sum = function () {
-    return a + b;
+testMe();
+
+let obj = {
+    name: "Shihab",
+    print: function () {
+        console.log(this);
+    }
 };
-// arrow function
-let sum2 = (a, b) => {
-    return a + b;
-};
 
-console.log(sum2(2, 3));
-
-let sqr = x => x * x;
-console.log(sqr(2))
-
+obj.print();
