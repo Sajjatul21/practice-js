@@ -1,38 +1,27 @@
-let set = new Set([1, 2, 3]);
-set.add(4);
-set.add(5);
-set.add(6);
-set.add(1);
+let map = new Map([
+    ["a", 1],
+    ["b", 2],
+    ["c", 3],
+    ["d", 4],
+]);
 
-// set.clear()
-// set.delete(5)
-// console.log(set.has(4));
+map.set("e", 5);
+/* map.set({name: "Shihab"}, 6)
+ */
+let objKey = { name: "Shihab" };
+map.set("objKey", 6);
+map.delete('c');
+map.delete("objKey");
+console.log(map);
+console.log(map.get("d"));
+console.log(map.get("objKey"));
 
-console.log(set.keys());
-console.log(set.values());
+console.log(map.keys());
+console.log(map.values());
+console.log(map.entries());
 
-let keyIterate = set.keys();
-console.log(keyIterate.next());
-console.log(keyIterate.next());
-console.log(keyIterate.next());
-console.log(keyIterate.next());
-console.log(keyIterate.next());
-console.log(keyIterate.next());
-
-
-let valueIterate = set.values();
-console.log(valueIterate.next());
-console.log(valueIterate.next());
-console.log(valueIterate.next());
-console.log(valueIterate.next());
-console.log(valueIterate.next());
-console.log(valueIterate.next());
-console.log(valueIterate.next());
-console.log(valueIterate.next());
-console.log(valueIterate.next());
-
-for (let v of set) {
-    console.log(v);
+for (let [k, v] of map) {
+    console.log(k, v);
 }
 
-console.log(set.entries())
+map.forEach((v, k) => console.log(v, k));
