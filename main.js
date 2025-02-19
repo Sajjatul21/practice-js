@@ -6,8 +6,11 @@ testMe();
 
 let obj = {
     name: "Shihab",
-    print:  ()=> {
-        console.log(this);
+    print: function () {
+        let self = this;
+        setTimeout(function () {
+            console.log(`Hello ${self.name}`);
+        }, 1000);
     }
 };
 
