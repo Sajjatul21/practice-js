@@ -1,15 +1,23 @@
-let n = 10;
-/* if (n > 5) {
-    throw new Error("N is grater than 5");
-} */
+// let n = Number.parseInt(52.35)
+// let n = Number.parseInt("52.35")
+// let n = Number.parseInt([])
+// let n = Number.parseInt({})
+// console.log(n)
 
-// range error
-/* if (n > 5) {
-    throw new RangeError("The Number is to long");
-} */
+function changeToInt(v) {
+    let result = Number.parseInt(v);
+    /* if (result == Nan) {
+        return 'Please Provide a value which is able to convert in Integer';
+    } */
+    if (!result) {
+        return 'Please Provide a value which is able to convert in Integer';
+    }
+    return result;
+}
 
-    // reference error
-    // console.log(a)
+// let result = changeToInt(42.5);
+// let result = changeToInt("42.5")
+let result = changeToInt("trqerqew")
 
-    //syntax error
-    console.log(a
+
+console.log(result);
