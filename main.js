@@ -1,17 +1,14 @@
-// console.log(window.document)
-// console.log(document)
-// console.log(document.body)
-// console.log(document.URL)
-
-
-let title = document.getElementById('title')
+let title = document.querySelector('#title')
 console.log(title)
 
-let paragraphs = document.getElementsByClassName('lead')
+let paragraph = document.querySelector('.lead')
+console.log(paragraph)
+
+let paragraphs = document.querySelectorAll('.lead')
 console.log(paragraphs)
 
-let lists = document.getElementsByTagName('li')
-console.log(lists)
+let list= document.querySelectorAll('li')
+console.log(list)
 
-let listItemOne = document.getElementsByName('list-item-one')
+let listItemOne = document.querySelector('[name^="list-item-one"]')
 console.log(listItemOne)
