@@ -1,24 +1,21 @@
 var arr = [1, 2, 3, 4];
-/* for (let i = 0; i < arr.length; i++) {
-    console.log(arr[i]);
-} */
 
-function createIterator(collection) {
-    let i = 0;
-    return {
-        next() {
-            return {
-                done: i >= collection.collection,
-                value: collection[i++]
-            };
-        }
-    };
-}
+console.log(arr[Symbol.iterator]());
 
-let iterate = createIterator(arr);
+var str = "TEXT";
+console.log(str[Symbol.iterator]());
+
+var iterate = arr[Symbol.iterator]();
 console.log(iterate.next());
 console.log(iterate.next());
 console.log(iterate.next());
 console.log(iterate.next());
 console.log(iterate.next());
 console.log(iterate.next());
+
+let iterateText  = str[Symbol.iterator]()
+console.log(iterateText.next())
+console.log(iterateText.next())
+console.log(iterateText.next())
+console.log(iterateText.next())
+console.log(iterateText.next())
