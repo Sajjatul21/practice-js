@@ -1,12 +1,22 @@
-try{
-    console.log("I am line 1")
-    throw new Error("I am error")
-    console.log("I am line 2")
-    console.log("I am line 3")
+class CustomError extends Error {
+    constructor(msg) {
+        super(msg);
+        if (Error.captureStackTrace) {
+            Error.captureStackTrace(this, CustomError);
+        }
+    }
 }
-catch{
-    console.log('this is custom error message')
+
+try {
+    console.log("I am line 1");
+    throw new CustomError("I am error");
+    console.log("I am line 2");
+    console.log("I am line 3");
 }
-finally{
-    console.log("I am finally block")
+catch (e) {
+    console.log(e.message);
+    // console.dir(e);
+}
+finally {
+    console.log("I am finally block");
 }
