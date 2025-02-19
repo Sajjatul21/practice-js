@@ -1,15 +1,14 @@
-let a = { a: 10 }, b = { b: 20 };
-/* let set = new Set([a, b]);
-a = null;
-
-console.log(set);
-let arr =[...set]
-console.log(arr)
-console.log(arr[0])
- */
-
-let weakSets = new WeakSet([a, b]);
-a = null;
-console.log(weakSets);
-console.log(weakSets.has(a));
-console.log(weakSets.has(b));
+class Rectangle {
+    constructor(width, height) {
+        this.width = width;
+        this.height = height;
+    }
+    draw() {
+        console.log("Drawing");
+    }
+}
+let rect1 = new Rectangle(45, 65);
+console.log(rect1);
+console.log(rect1.draw());
+console.log(typeof Rectangle);
+console.log(typeof rect1);
