@@ -1,42 +1,17 @@
-/* function myPromise (){
-    return Promise.resolve("test value")
-}
+// console.log(window.document)
+// console.log(document)
+// console.log(document.body)
+// console.log(document.URL)
 
-console.log(myPromise()) */
 
-/* async function  test() {
-    return 'test'
-}
-test().then(v=>console.log(v)) */
+let title = document.getElementById('title')
+console.log(title)
 
-let p1 = new Promise(resolve => setTimeout(resolve, 3000, 'Test Value'));
-async function myAsyncFunc() {
-    // p1.then(v=>console.log(v))
-    let v = await p1;
-    console.log("test");
-    console.log(v);
+let paragraphs = document.getElementsByClassName('lead')
+console.log(paragraphs)
 
-}
-myAsyncFunc();
+let lists = document.getElementsByTagName('li')
+console.log(lists)
 
-async function fetchDate() {
-    try {
-        let res = await fetch('https://jsonplaceholder.typicode.com/users');
-        // console.log(res)
-        let data = await res.json();
-        // console.log(data);
-        let names = data.map(u => u.name);
-        console.log(names);
-    }
-    catch (e) {
-        console.log(e.message)
-    }
-}
-fetchDate();
-
-let promises = [Promise.resolve(1), Promise.resolve(2), Promise.resolve(3)]
-async function promiseAll() {
-    let result = await Promise.all (promises)
-    console.log(result)
-}
-promiseAll()
+let listItemOne = document.getElementsByName('list-item-one')
+console.log(listItemOne)
