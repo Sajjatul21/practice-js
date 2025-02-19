@@ -8,9 +8,9 @@ let obj = {
     name: "Shihab",
     print: function () {
         let self = this;
-        setTimeout(function () {
+        setTimeout(() => {
             console.log(`Hello ${this.name}`);
-        }.bind(this), 1000);
+        }, 1000);
     }
 };
 
