@@ -1,45 +1,12 @@
-/* const xhr = new XMLHttpRequest();
-xhr.open("get", 'https://jsonplaceholder.typicode.com/users');
+let arr = [1, 2, 3, 4, 5];
+let sqrArr = arr.map(v => v * v);
+console.log(sqrArr);
 
-xhr.onreadystatechange = function (e) {
-    if (xhr.readyState == 4) {
-        if (xhr.status == 200) {
-            let response = JSON.parse(xhr.response);
-            console.log(response);
-        }
-        else {
-            console.log(xhr.status);
-        }
-    }
-};
-
-xhr.send(); */
-
-function getRequest(url, callback) {
-    const xhr = new XMLHttpRequest();
-    xhr.open('get', url);
-    xhr.onreadystatechange = function (e) {
-        if (xhr.readyState == 4) {
-            if (xhr.status == 200) {
-                let response = JSON.parse(xhr.response);
-                callback(null, response);
-            }
-            else {
-                callback(xhr.status, null);
-            }
-        }
-    };
-    xhr.send();
+function asyncMap(arr, callback) {
+    return arr.map(v => {
+        // setTimeout(callback.bind(null, v), 0);
+        setTimeout(()=>callback(v),0)
+    });
 }
 
-getRequest('https://jsonplaceholder.typicode.com/posts', function (err, res) {
-    if (err) {
-        console.loge(err);
-    }
-    else {
-        // console.log(res);
-        res.forEach(r => {
-            console.log(r.title);
-        });
-    }
-});
+let qbArr = asyncMap(arr,v=>console.log(v*v*v))
