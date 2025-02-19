@@ -37,6 +37,9 @@ getRequest('https://jsonplaceholder.typicode.com/posts', function (err, res) {
         console.loge(err);
     }
     else {
-        console.log(res);
+        // console.log(res);
+        res.forEach(r => {
+            console.log(r.title);
+        });
     }
 });
