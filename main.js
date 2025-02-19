@@ -1,25 +1,23 @@
-const _radius = Symbol();
-const _name = Symbol();
-const _draw = Symbol();
+const _radius = new WeakMap();
+const _name = new WeakMap();
+const _resize = new WeakMap();
 
 class Circle {
     constructor(radius, name) {
-        this[_radius] = radius;
-        this[_name] = name;
+        this.size = 100;
+        _radius.set(this, radius);
+        _name.set(this, name);
+        _resize.set(this, () => {
+            console.log(this.size);
+        });
     }
-    [_draw]() {
+    draw() {
         console.log("Drawing....");
+        console.log(_radius.get(this), _name.get(this));
+        console.log(this.size);
     }
 }
 
 let c1 = new Circle(2, "Red");
 console.log(c1);
-
-console.log(Object.getOwnPropertyNames(c1));
-console.log(Object.getOwnPropertySymbols(c1));
-
-let key = Object.getOwnPropertySymbols(c1)[0];
-console.log(c1[key]);
-
-let key2 = Object.getOwnPropertySymbols(c1)[1];
-console.log(c1[key2]);
+c1.draw()
