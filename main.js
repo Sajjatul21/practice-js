@@ -1,42 +1,42 @@
-/* const delay = s=> new Promise(resolve=>setTimeout(resolve,s * 1000))
+/* function myPromise (){
+    return Promise.resolve("test value")
+}
 
-delay(2).then(()=>console.log('2 Second Delay'))
-delay(1).then(()=>console.log('1 Second Delay'))
-delay(3).then(()=>console.log('3 Second Delay'))
-delay(5).then(()=>console.log('5 Second Delay'))
-delay(4).then(()=>console.log('4 Second Delay')) */
+console.log(myPromise()) */
 
-/* let p1 = Promise.resolve('Test');
-console.log(p1);
-p1.then(v => console.log(v));
-let p2 = Promise.reject("REject");
-console.log(p2);
-p2.catch(e => console.log(e)); */
+/* async function  test() {
+    return 'test'
+}
+test().then(v=>console.log(v)) */
 
-/* let p1 = Promise.resolve('One')
-let p2 = Promise.resolve('two')
-let p3 = Promise.resolve('three')
-let p4 = Promise.resolve('four')
-let p = [p1, p2, p3, p4]
+let p1 = new Promise(resolve => setTimeout(resolve, 3000, 'Test Value'));
+async function myAsyncFunc() {
+    // p1.then(v=>console.log(v))
+    let v = await p1;
+    console.log("test");
+    console.log(v);
 
-Promise.all(p)
-.then(arr=>console.log(arr)) */
+}
+myAsyncFunc();
 
-let p1 = new Promise(resolve => {
-    setTimeout(resolve, 5000, 'One');
-});
+async function fetchDate() {
+    try {
+        let res = await fetch('https://jsonplaceholder.typicode.com/users');
+        // console.log(res)
+        let data = await res.json();
+        // console.log(data);
+        let names = data.map(u => u.name);
+        console.log(names);
+    }
+    catch (e) {
+        console.log(e.message)
+    }
+}
+fetchDate();
 
-let p2 = new Promise(resolve => {
-    setTimeout(resolve, 1000, 'tow');
-});
-
-let p3 = new Promise(resolve => {
-    setTimeout(resolve, 3000, 'three');
-});
-
-let promiseArr = [p1, p2, p3];
-Promise.all(promiseArr)
-    .then(arr => console.log(arr));
-
-Promise.race(promiseArr)
-    .then(arr => console.log(arr));
+let promises = [Promise.resolve(1), Promise.resolve(2), Promise.resolve(3)]
+async function promiseAll() {
+    let result = await Promise.all (promises)
+    console.log(result)
+}
+promiseAll()
