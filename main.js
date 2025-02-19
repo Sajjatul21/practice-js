@@ -6,7 +6,7 @@ testMe();
 
 let obj = {
     name: "Shihab",
-    print: function () {
+    print:  ()=> {
         console.log(this);
     }
 };
