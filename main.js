@@ -1,51 +1,25 @@
-class MathUtility {
-    // 
-    static square(x) {
-        return x * x;
-    }
-    cube(x) {
-        return x * x * x;
-    }
-}
+const _radius = Symbol();
+const _name = Symbol();
+const _draw = Symbol();
 
-console.log(MathUtility.square(2));
-
-const obj = new MathUtility();
-console.log(obj.cube(3));
-
-class User {
-    constructor(name, age) {
-        this.name = name;
-        this.age = age;
+class Circle {
+    constructor(radius, name) {
+        this[_radius] = radius;
+        this[_name] = name;
     }
-    static CreateAdmin() {
-        return new User("Sajjatul", 26);
+    [_draw]() {
+        console.log("Drawing....");
     }
 }
 
-/* const user = new User("Sajjatul", 26);
-console.log(user); */
+let c1 = new Circle(2, "Red");
+console.log(c1);
 
-const admin = User.CreateAdmin();
-console.log(admin);
+console.log(Object.getOwnPropertyNames(c1));
+console.log(Object.getOwnPropertySymbols(c1));
 
-class Person {
-    constructor(name, email) {
-        this.name = name;
-        this.email = email;
-    }
-    print() {
-        console.log(this.name, this.email);
-    }
-    static create() {
-        let person = JSON.parse(str);
-        return new Person(person.name, person.email);
-    }
-}
+let key = Object.getOwnPropertySymbols(c1)[0];
+console.log(c1[key]);
 
-let str = '{ "name": "Shhab", "email": "shihab@emial.com" }';
-let p1 = Person.create(str);
-console.log(p1);
-
-console.log(p1 instanceof Person);
-p1.print();
+let key2 = Object.getOwnPropertySymbols(c1)[1];
+console.log(c1[key2]);
