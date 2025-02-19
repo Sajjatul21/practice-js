@@ -1,23 +1,17 @@
-// let n = Number.parseInt(52.35)
-// let n = Number.parseInt("52.35")
-// let n = Number.parseInt([])
-// let n = Number.parseInt({})
-// console.log(n)
-
-function changeToInt(v) {
-    let result = Number.parseInt(v);
-    /* if (result == Nan) {
-        return 'Please Provide a value which is able to convert in Integer';
-    } */
-    if (!result) {
-        return 'Please Provide a value which is able to convert in Integer';
+function makeWords(text) {
+    try {
+        let str = text.trim();
+        console.log(str);
+        let words = str.split(" ");
+        return words;
     }
-    return result;
+    catch (e) {
+        // console.log(e);
+        // console.dir(e);
+        // return (e.message);
+        return "please provide a text"
+    }
 }
-
-// let result = changeToInt(42.5);
-// let result = changeToInt("42.5")
-let result = changeToInt("trqerqew")
-
-
-console.log(result);
+// let words = makeWords("            kkfjal lkal ;jfja;  kjjj        ");
+let words = makeWords(54);
+console.log(words);
