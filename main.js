@@ -1,37 +1,15 @@
-function extend(Parent, Children) {
-    Children.prototype = Object.create(Parent.prototype);
-    Children.prototype.constructor = Children;
-}
+var str = `My name is Sajjatul Islm
+        I am 26 years old
+I am learning JavaScript `;
+console.log(str);
 
-function Shape(color) {
-    this.color = color;
-}
-Shape.prototype = {
-    common: function () {
-        console.log("I am common function");
-    }
-};
+var age = 26;
+var name = "Sajjatul Islam";
 
+console.log(`My name is ${name} and I am ${age} old. I am ${age < 18 ? 'not ' : ""}adult`);
 
-function Square(width, color) {
-    Shape.call(this, color);
-    this.width = width;
-}
-extend(Shape, Square);
-Square.prototype.draw = function () {
-    console.log("Drawing");
-};
-
-var sqr = new Square(56, "Green");
-
-
-function Circle(color, radius) {
-    Shape.call(this, color);
-    this.radius = radius;
-}
-extend(Shape, Circle);
-Circle.prototype.common = function () {
-    console.log("I am calling from Circle. and I have overridden");
-    Shape.prototype.common.call(this);
-};
-var c = new Circle('Red', 5);
+console.log(name.padStart(25));
+console.log(name.padEnd(25));
+console.log(name.padStart(24, "*"));
+console.log(name.padEnd(25, "F"));
+console.log("S".repeat(10));
