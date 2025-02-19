@@ -1,15 +1,12 @@
-var str = `My name is Sajjatul Islm
-        I am 26 years old
-I am learning JavaScript `;
-console.log(str);
+const name = "Shihab";
+console.log(name);
 
-var age = 26;
-var name = "Sajjatul Islam";
+let age = 26;
+console.log(age);
 
-console.log(`My name is ${name} and I am ${age} old. I am ${age < 18 ? 'not ' : ""}adult`);
+{
+    let a = "another";
+    console.log(a);
+}
 
-console.log(name.padStart(25));
-console.log(name.padEnd(25));
-console.log(name.padStart(24, "*"));
-console.log(name.padEnd(25, "F"));
-console.log("S".repeat(10));
+// console.log(a); reference error 
