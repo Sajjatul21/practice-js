@@ -1,16 +1,15 @@
-// import Rectangle from "./Rectangle.js";
-/* 
-let r = new Rectangle("Red", 3, 4);
-console.log(r);
-r.draw();
-console.log(r.color); */
+let n = 10;
+/* if (n > 5) {
+    throw new Error("N is grater than 5");
+} */
 
-/* import * as func from "./func.js";
+// range error
+/* if (n > 5) {
+    throw new RangeError("The Number is to long");
+} */
 
-console.log(func);
- */
+    // reference error
+    // console.log(a)
 
-import { add, div } from './func.js';
-console.log(add(3, 4));
-
-console.log(div(52, 7));
+    //syntax error
+    console.log(a
