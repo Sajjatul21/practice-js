@@ -1,14 +1,12 @@
-let title = document.querySelector('#title')
-console.log(title)
+let li1 = document.getElementsByTagName('li')
+let li2 = document.querySelectorAll('lI')
 
-let paragraph = document.querySelector('.lead')
-console.log(paragraph)
+console.log(li1)
+console.log(li2)
 
-let paragraphs = document.querySelectorAll('.lead')
-console.log(paragraphs)
+console.log(li1.constructor.name)
+console.log(li2.constructor.name)
 
-let list= document.querySelectorAll('li')
-console.log(list)
-
-let listItemOne = document.querySelector('[name^="list-item-one"]')
-console.log(listItemOne)
+let ul = document.querySelector('ul')
+console.log(ul.children)
+console.log(ul.childNodes)
