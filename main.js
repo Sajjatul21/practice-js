@@ -30,3 +30,9 @@ console.log(valueIterate.next());
 console.log(valueIterate.next());
 console.log(valueIterate.next());
 console.log(valueIterate.next());
+
+for (let v of set) {
+    console.log(v);
+}
+
+console.log(set.entries())
