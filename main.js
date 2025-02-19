@@ -1,12 +1,19 @@
-const name = "Shihab";
-console.log(name);
-
-let age = 26;
-console.log(age);
-
-{
-    let a = "another";
-    console.log(a);
+// function declaration
+function add(a, b) {
+    return a + b;
 }
 
-// console.log(a); reference error 
+// function expression
+let sum = function () {
+    return a + b;
+};
+// arrow function
+let sum2 = (a, b) => {
+    return a + b;
+};
+
+console.log(sum2(2, 3));
+
+let sqr = x => x * x;
+console.log(sqr(2))
+
