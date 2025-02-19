@@ -1,33 +1,16 @@
-let p1 = new Promise((resolve, reject) => {
-    setTimeout(resolve, 5000, 'one');
-});
+/* const BASE_URL = 'https://jsonplaceholder.typicode.com';
+let res = fetch(`${BASE_URL}/user/1`);
+console.log(res); */
 
-let p2 = new Promise((resolve, reject) => {
-    setTimeout(resolve, 300, 'tow');
-});
-/* 
-console.log(p1)
-console.log(p2) */
+/* const BASE_URL = 'https://jsonplaceholder.typicode.com';
+fetch(`${BASE_URL}/user/1`)
+.then(res=>{
+    // console.log(res)
+    console.log(res.json())
+}).catch(e=>console.log(e)) */
 
-p1.then(v => {
-    console.log(v);
-}).catch(e => console.log(e));
-
-
-function getIphone(isPassed) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            if (isPassed) {
-                resolve("I have got an iPhone");
-            }
-            else {
-                reject(new Error("you got Failed"));
-            }
-        }, 2000);
-    });
-}
-
-// getIphone(false)
-getIphone(true)
-    .then(res => console.log(res))
-    .catch(e => console.log(e.message));
+const BASE_URL = 'https://jsonplaceholder.typicode.com';
+fetch(`${BASE_URL}/users/1`)
+.then(res=>res.json())
+.then(data =>console.log(data))
+.catch(e=>console.log(e))
