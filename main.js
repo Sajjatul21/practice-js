@@ -1,12 +1,10 @@
-let li1 = document.getElementsByTagName('li')
-let li2 = document.querySelectorAll('lI')
-
-console.log(li1)
-console.log(li2)
-
-console.log(li1.constructor.name)
-console.log(li2.constructor.name)
-
-let ul = document.querySelector('ul')
-console.log(ul.children)
-console.log(ul.childNodes)
+let listItem = document.getElementsByTagName('li')
+// console.log(listItem)
+// let listItems = Array.from(listItem)
+// console.log(listItems)
+let listItems =[...listItem]
+listItems.forEach((i, index)=>{
+    console.log(i,index)
+    let text= i.innerHTML
+    i.innerHTML =   `${index+ 1} ${text}`
+})
