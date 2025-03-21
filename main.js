@@ -1,13 +1,14 @@
-/ primitive =>  Primitive type are defined by Javascript;
+var num = 123;
+var pi = 3.14;
+console.log(num);
+console.log(pi);
 
-1. Number(1, 2, 3, 6.7);
-2. String("This is text");
-3. Boolean(True or False);
-4. undefined;
-5. null;
+var num1 = Number(45);
+var num2 = Number('45.5');
 
-// object => object type are user defined data type 
+console.log(Number.parseFloat(num));
+console.log(Number.parseInt(pi));
+console.log(Number.parseInt(num2));
 
-1. Array;
-2. Object;
-3. Function; 
+console.log(Number.MAX_VALUE);
+console.log(Number.MIN_SAFE_INTEGER);
