@@ -1,14 +1,5 @@
-var num = 123;
-var pi = 3.14;
-console.log(num);
-console.log(pi);
+var str = 'stirng';
+var str2 = 'string2';
+var str3 = 'string3';
+console.log(str, str2, str3);
 
-var num1 = Number(45);
-var num2 = Number('45.5');
-
-console.log(Number.parseFloat(num));
-console.log(Number.parseInt(pi));
-console.log(Number.parseInt(num2));
-
-console.log(Number.MAX_VALUE);
-console.log(Number.MIN_SAFE_INTEGER);
