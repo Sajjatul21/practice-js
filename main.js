@@ -1,9 +1,7 @@
-var str = 'stirng';
-var str2 = 'string2';
-var str3 = 'string3';
-console.log(str, str2, str3);
+var b1 = true;
+var b2 = false;
 
-var str4 = String("fafd");
-var str5 = String(124);
-var str6 = String(3.1416);
-console.log(str4, str5, str6);
+console.log("boolean lateral: ", b1, b2)
+var b3 = Boolean(true)
+var b4 = Boolean(false)
+console.log('constructor boolean', b3, b4)
