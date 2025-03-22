@@ -1,18 +1,26 @@
-var a = "I am";
-var b = "Shihab";
-var c = a.concat(" " + b);
+var str = 'some string';
+console.log(str.charAt(0));
 
-console.log(c);
+var str2 = str.charAt(2);
+console.log(str2);
 
-var d = c.substr(5, 4);
-console.log(d);
+var str3 = str.charAt(100);
+console.log(str3);
+console.log(typeof str3);
 
-console.log(c.charAt(3));
-console.log(c.startsWith("I am"));
-console.log(c.endsWith("sj32"));
-console.log(a.toUpperCase());
-console.log(a.toLowerCase());
-console.log('           Sajjatul islam       '.trim());
 
-// split () give us array  break the string
-console.log(c.split(' '));
+str = 'Some String';
+var length = 0;
+
+while (true) {
+    if (str.charAt(length) == '') {
+        break;
+    }
+    else {
+        length++;
+    }
+}
+console.log(length);
+
+//easy way to find out string length
+console.log('Sajjatul Islam'.length);
