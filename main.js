@@ -1,12 +1,19 @@
-var n = 10;
-var str = '';
-if (n % 2 == 0) {
-    str = 'even';
+/* var name = ''
+var fullName = ''
+if(name.length == 0){
+    fullName = 'Shihab'
 }
-else {
-    str = 'odd';
+else{
+    fullName = name
 }
-console.log(str);
+console.log(fullName)
 
-var result = n % 2 == 0 ? 'Even' : "odd";
-console.log(result);
+ */
+
+var name = '';
+var fullName = name || 'Shihab';
+console.log(fullName);
+
+var isOk = true;
+
+isOk && console.log('Every thing is ok');
