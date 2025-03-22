@@ -1,17 +1,30 @@
-var a = 10;
-var b = 20;
+var date = new Date();
+// 0 - sunday, 1 - monday, 2 - tuesday
 
-if (a > b) {
-    console.log("A is greater than B");
-}
-else {
-    console.log("B is greater than A");
-}
+var today = date.getDay();
 
-var n = 5;
-if (n % 2 == 0) {
-    console.log(n + " is Even Number");
-}
-else {
-    console.log(n + ' is Odd Number');
+switch (today) {
+    case 0:
+        console.log("Today is Sunday");
+        break;
+    case 1:
+        console.log("Today is Monday");
+        break;
+    case 2:
+        console.log("Today is Tuesday");
+        break;
+    case 3:
+        console.log("Today is Wednesday");
+        break;
+    case 4:
+        console.log("Today is Thursday");
+        break;
+    case 5:
+        console.log("Today is Friday");
+        break;
+    case 6:
+        console.log("Today is Saturday");
+        break;
+    default:
+        console.log("Not a valid Number");
 }
