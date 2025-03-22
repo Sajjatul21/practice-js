@@ -1,15 +1,8 @@
-var str1 = 'shihab';
-console.log(str1);
-
-var str2 = String('sajjatul');
-console.log(str2);
-
-var n = 10;
-
-var str3 = n + '';
-var str4 = n.toString();
-
-var str5 = String(n);
-console.log(str3);
-console.log(str4);
-console.log(str5);
+var str = 'This is a \'String\'';
+console.log(str)
+var str1 = 'This is a \nString';
+console.log(str1)
+var str2 = 'This is a \tString';
+console.log(str2)
+var str3 = 'This is a \\String';
+console.log(str3)
