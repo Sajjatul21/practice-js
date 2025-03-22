@@ -1,30 +1,39 @@
-var date = new Date();
-// 0 - sunday, 1 - monday, 2 - tuesday
+/*  Logical Operator
 
-var today = date.getDay();
+1.&&
+2.||
+3. !
 
-switch (today) {
-    case 0:
-        console.log("Today is Sunday");
-        break;
-    case 1:
-        console.log("Today is Monday");
-        break;
-    case 2:
-        console.log("Today is Tuesday");
-        break;
-    case 3:
-        console.log("Today is Wednesday");
-        break;
-    case 4:
-        console.log("Today is Thursday");
-        break;
-    case 5:
-        console.log("Today is Friday");
-        break;
-    case 6:
-        console.log("Today is Saturday");
-        break;
-    default:
-        console.log("Not a valid Number");
+*/
+
+var a = 10;
+var b = 30;
+var c= 20;
+
+if(a > b && a>c){
+    console.log(" a is greater than b and c")
 }
+else if(b>a && b> c){
+    console.log("b is greater than a and c")
+}
+else{
+    console.log('c i large')
+}
+
+
+var a = 50;
+var b = 30;
+var c= 20;
+
+if(a > b || a>c){
+    console.log("a is greater than b and c")
+}
+else if(b>a || b> c){
+    console.log("b is greater than a and c")
+}
+else{
+    console.log('c i large')
+}
+
+var check = !(a>b)
+console.log(check)
