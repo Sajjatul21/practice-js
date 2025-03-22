@@ -7,3 +7,12 @@ for (var i = 1; i <= 10; i++) {
         console.log(i);
     }
 }
+
+
+var sum = 0;
+for (var i = 1; i <= 10; i++) {
+
+    console.log(sum + " + " + i + " = " + (sum + i));
+    sum += i; // sum = sum + i;
+}
+console.log("total sum", sum);
