@@ -1,23 +1,13 @@
-var arr = [1, 4, 3, 9, 8, 5, 7];
-arr[2] = 3;
-console.log(arr);
+var arr = [1, 2, 52, 6, 2, 74, 83, 26];
 
-arr.push(9);
-console.log(arr);
-arr.unshift(20);
-console.log(arr);
+var find = 10;
 
-/*  array.split(startIndex, delete count, addItem1, addItem2) */
-
-arr.splice(2, 0, 1000);
-console.log(arr);
-
-arr.pop();
-console.log(arr);
-
-arr.shift();
-
-arr.splice(2, 1);
-console.log(arr);
-
-arr.splice(3, 1, 33, 44);
+for (var i = 0; i < arr.length; i++) {
+    if (arr[i] == find) {
+        console.log('date find at index ', i);
+        break
+    }
+    else{
+        console.log('date is not found')
+    }
+}
