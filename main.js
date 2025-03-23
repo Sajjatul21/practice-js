@@ -11,3 +11,13 @@ console.log(arr);
 
 arr.splice(2, 0, 1000);
 console.log(arr);
+
+arr.pop();
+console.log(arr);
+
+arr.shift();
+
+arr.splice(2, 1);
+console.log(arr);
+
+arr.splice(3, 1, 33, 44);
