@@ -1,6 +1,6 @@
 var arr = [1, 4, 3, 9, 8, 5, 7];
-var sum = 0;
 for (var i = 0; i < arr.length; i++) {
-    sum += arr[i];
+    if (arr[i] % 2 == 0) {
+        console.log(arr[i]);
+    }
 }
-console.log(sum);
