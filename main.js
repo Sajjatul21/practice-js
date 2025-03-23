@@ -1,15 +1,24 @@
-var arr = [1, 2, 52, 6, 2, 74, 83, 26];
 
-var find = 10;
-var isFound = false;
+var arr = [
+    [87, 56, 79, 100],
+    [58, 78, 98, 90],
+    [96, 79, 45, 99]
+];
+// console.log(arr);
+
+/* console.log(arr[0]);
+console.log(arr[1]);
+console.log(arr[2]);
+ */
+
+/* console.log(arr[0][0]);
+console.log(arr[1][2]);
+console.log(arr[2][1]); */
+
+
 for (var i = 0; i < arr.length; i++) {
-    if (arr[i] == find) {
-        console.log('date find at index ', i);
-        isFound = true;
-        break;
-
+    // console.log(arr[i]);
+    for (var j = 0; j < arr[i].length; j++) {
+        console.log("Element " + i + ": " + arr[i][j]);
     }
 }
-if (!isFound) {
-    console.log('Date not found');
-}   
