@@ -1,20 +1,6 @@
-var obj = {
-    x: 10,
-    y: 20,
-    z: 30
-};
+/* 
+    In JavaScript, a function is a block of code designed to perform a particular task. Functions can take inputs (called parameters or arguments) and return a result (an output). Functions allow you to reuse code, organize it into modular units, and improve the readability and maintainability of your code.
+*/
 
-console.log(Object.keys(obj));
-console.log(Object.values(obj));
-console.log(Object.entries(obj));
-
-
-var obj1 = {
-    x: 10,
-    y: 20,
-    z: 30
-};
-var obj2 = Object.assign({}, obj1);
-obj2.x = 200;
-console.log(obj1);
-console.log(obj2);
+var date = new Date();
+date.getFullYear();
