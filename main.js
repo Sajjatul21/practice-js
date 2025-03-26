@@ -1,9 +1,10 @@
-
- var point = {
-    x: 10,
-    y: 20,
-    z: 30
+var obj1 = {
+    a: 10,
+    b: 20
+};
+var obj2 = {
+    a: 10,
+    b: 20
 };
 
-delete point.x;
-console.log(point);
+console.log(obj1 === obj2);
