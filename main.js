@@ -14,7 +14,7 @@ var obj1 = {
     y: 20,
     z: 30
 };
-var obj2 = obj1;
-obj2.x = 100;
+var obj2 = Object.assign({}, obj1);
+obj2.x = 200;
 console.log(obj1);
 console.log(obj2);
