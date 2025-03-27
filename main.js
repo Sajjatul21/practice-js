@@ -1,9 +1,11 @@
-var a = 'abc';
-
-if (true) {
-    if (true) {
-        var b = 'i am b';
+var a = 30;
+function x() {
+    // var a = 20;
+    function y() {
+        // var a = 10; 
+        console.log(a);
     }
+    console.log(a);
+    y();
 }
-
-console.log(b);
+x();
