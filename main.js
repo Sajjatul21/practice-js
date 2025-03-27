@@ -1,5 +1,5 @@
 function functionName() {
-
+    console.log("I am a function");
 }
 
 function add() {
@@ -13,3 +13,12 @@ function sub() {
     var b = 20;
     console.log(a - b);
 }
+
+functionName();
+
+for (var i = 5; i < 5; i++) {
+    functionName();
+}
+
+add();
+sub();
