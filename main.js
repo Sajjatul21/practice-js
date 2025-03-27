@@ -4,4 +4,6 @@ function test(a, b, c) {
         console.log(arguments[i]);
     }
 }
-test(1, 2, 3);
+
+addAll(1,2,3,4)
+addAll(1,2,3,4,6,7,8,9,10)
