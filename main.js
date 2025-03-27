@@ -1,10 +1,8 @@
-function addAll() {
-    var sum = 0;
-    for (var i = 0; i < arguments.length; i++) {
-        sum += arguments[i];
+function something(greet, name){
+    function sayHi (){
+        console.log(greet, name)
     }
-    return sum;
+    sayHi()
 }
 
-var result = addAll(1, 2, 3);
-console.log(result);
+something('good morning', 'shihab')
