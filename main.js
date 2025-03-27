@@ -1,8 +1,15 @@
-function something(greet, name){
-    function sayHi (){
-        console.log(greet, name)
+function message(greet, name) {
+    function getFirstName() {
+        if (name) {
+            return name.split(' ')[0];
+        }
+        else {
+            return '';
+        }
     }
-    sayHi()
+    var message = greet + " " + getFirstName();
+    console.log(message);
 }
 
-something('good morning', 'shihab')
+message("Good Morning", "Sajjatul Islam");
+message("Good Morning");
