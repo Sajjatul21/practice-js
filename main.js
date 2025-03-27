@@ -1,30 +1,13 @@
-var a = 30;
-function x() {
-    // var a = 20;
-    function y() {
-        // var a = 10; 
-        console.log(a);
-    }
-    console.log(a);
-    y();
-}
-x();
+//  what is function programming
 
-function test(n) {
-    function a() {
-        return n % 3 == 0;
-    }
+/* 
+    Functional programming is a programming programming paradigm - stye of balding the structure and elements of computer programs -that
+    treat commotion as evaluation of mathematical functional avoids changing0state and mutable data- wikipedia
+*/
 
-    function b() {
-        return n % 5 == 0;
-    }
-    if (a() && b()) {
-        console.log(n, 'is divisible by both 3 and 5');
-    }
-    else {
-        console.log('not a valid number');
-    }
-}
+/* three main terms 
+    1. pure function
+    2. First Class function
+    3. Higher Order Function
 
-test(10);
-test(15);
+*/
