@@ -1,37 +1,33 @@
 <!DOCTYPE html>
 <html>
+<style>
+    p.uppercase {
+        text-transform: uppercase;
+    }
+
+    p.lowercase {
+        text-transform: lowercase;
+    }
+
+    p.capitalize {
+        text-transform: capitalize;
+    }
+</style>
 
 <head>
     <style>
-        input[type=text] {
-            width: 20%;
-            box-sizing: border-box;
-            border: 2px solid #ccc;
-            border-radius: 4px;
-            font-size: 16px;
-            background-color: white;
-            background-image: url('images/search.png');
-            background-repeat: no-repeat;
-            background-position: 10px 10px;
-            padding: 12px 20px 12px 40px;
-            background-size: 1.5rem;
-            transition: width 0.4s ease-in-out;
-        }
 
-        input[type=text]:focus {
-            width: 100%;
-        }
     </style>
 </head>
 
 <body>
 
+    <h1>Using the text-transform property</h1>
 
-    <h2>Input field with an icon inside </h2>
+    <p class="uppercase">This text is transformed to uppercase.</p>
+    <p class="lowercase">This text is transformed to lowercase.</p>
+    <p class="capitalize">This text is capitalized.</p>
 
-    <form>
-        <input type="text" name="search" id="" placeholder="Search..">
-    </form>
 </body>
 
 </html>
